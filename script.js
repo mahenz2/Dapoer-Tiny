@@ -624,6 +624,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Contact Form Submit to WhatsApp
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+      const waMessage = [
+        'Halo Dapoer Tiny, saya ingin menghubungi Anda.',
+        `Nama: ${name}`,
+        `Email: ${email}`,
+        `Pesan: ${message}`
+      ].join('\n');
+
+      window.open(`https://wa.me/6282146292505?text=${encodeURIComponent(waMessage)}`, '_blank', 'noopener,noreferrer');
+      showToast('WhatsApp dibuka dengan pesan Anda. Silakan tinjau dan kirim.');
+    });
+  }
+
   // Keyboard Accessibility: Escape to close modals
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {

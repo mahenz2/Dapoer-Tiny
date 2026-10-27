@@ -14,7 +14,7 @@
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261027-contact">
 </head>
 <body>
 
@@ -881,6 +881,46 @@
     </div>
   </section>
 
+  <!-- CONTACT FORM -->
+  <section class="contact-section" id="kontak">
+    <div class="container contact-layout">
+      <div class="contact-intro">
+        <span class="contact-eyebrow">KONTAK DAPOER TINY</span>
+        <h2 class="section-title">Hubungi <i>Kami</i></h2>
+        <p>Ada pertanyaan tentang menu, pesanan, atau katering? Kirim pesan dan Admin Pemesanan kami akan membantu.</p>
+
+        <div class="contact-person-card">
+          <div class="contact-person-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></div>
+          <div class="contact-person-copy">
+            <span class="contact-person-label">Kontak person</span>
+            <strong>Admin Pemesanan</strong>
+            <a class="contact-person-phone" href="https://wa.me/6282146292505" target="_blank" rel="noopener">+62 821-4629-2505</a>
+          </div>
+        </div>
+        <span class="contact-hours"><i class="fa-regular fa-clock" aria-hidden="true"></i> Layanan 24 jam setiap hari</span>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="contact-field">
+          <label for="contactName">Nama <span aria-hidden="true">*</span></label>
+          <input id="contactName" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Nama lengkap Anda" required>
+        </div>
+        <div class="contact-field">
+          <label for="contactEmail">Email <span aria-hidden="true">*</span></label>
+          <input id="contactEmail" name="email" type="email" autocomplete="email" maxlength="120" placeholder="nama@email.com" required>
+        </div>
+        <div class="contact-field">
+          <label for="contactMessage">Pesan / Pertanyaan <span aria-hidden="true">*</span></label>
+          <textarea id="contactMessage" name="message" rows="5" maxlength="1200" placeholder="Ceritakan yang ingin Anda tanyakan..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-brown-primary contact-submit-btn">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Lanjut ke WhatsApp
+        </button>
+        <p class="contact-form-note">Pesan akan disiapkan di WhatsApp untuk Anda tinjau dan kirim.</p>
+      </form>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="main-footer">
     <div class="container footer-grid">
@@ -922,12 +962,12 @@
         </ul>
       </div>
 
-      <div class="footer-col" id="kontak">
+      <div class="footer-col">
         <h4>Kontak &amp; Pemesanan</h4>
         <ul>
-          <li><a href="https://wa.me/6282146292505"><i class="fa-brands fa-whatsapp"></i> +62 821-4629-2505</a></li>
+          <li><a href="https://wa.me/6282146292505" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +62 821-4629-2505</a></li>
           <li><a href="mailto:order@dapoertiny.com"><i class="fa-regular fa-envelope"></i> order@dapoertiny.com</a></li>
-          <li><span><i class="fa-regular fa-clock"></i> 09:00 - 21:00 WIB</span></li>
+          <li><span><i class="fa-regular fa-clock"></i> Buka 24 jam setiap hari</span></li>
           <li><span><i class="fa-solid fa-location-dot"></i> Pengiriman Cepat (Instant Courier)</span></li>
         </ul>
       </div>
@@ -1044,6 +1084,6 @@
     <span id="toastMsg">Menu berhasil ditambahkan ke keranjang!</span>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261027-contact"></script>
 </body>
 </html>
