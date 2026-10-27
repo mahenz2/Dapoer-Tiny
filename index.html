@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dapoer Tiny — Artisan Culinary &amp; Kitchen</title>
+  <meta name="description" content="Dapoer Tiny: Sajian kuliner otentik, artisan sourdough, dan hidangan daging empuk panggang lambat dengan bahan segar pilihan diolah penuh cinta.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23A55704'/><text x='50' y='65' font-size='42' font-family='serif' fill='white' text-anchor='middle'>D</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond &amp; Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement / Contact Bar -->
+  <header class="top-header">
+    <div class="container top-header-inner">
+      <div class="contact-info">
+        <a href="mailto:order@dapoertiny.com" class="contact-link">
+          <i class="fa-regular fa-envelope"></i> order@dapoertiny.com
+        </a>
+        <span class="divider-dot">•</span>
+        <a href="https://wa.me/628123456789" class="contact-link" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890 (WhatsApp)
+        </a>
+      </div>
+      <div class="top-tagline">
+        <span class="tagline-marquee"><i class="fa-solid fa-wheat-awn"></i> 100% BAHAN ORGANIK PILIHAN • FRESHLY BAKED &amp; SLOW-COOKED SETIAP HARI</span>
+      </div>
+      <div class="top-actions">
+        <span class="pill-badge active">MAIN DISH</span>
+        <span class="pill-badge">ARTISAN BAKERY</span>
+        <span class="pill-badge">DESSERT</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Sticky Navigation -->
+  <nav class="main-nav" id="mainNavbar">
+    <div class="container nav-inner">
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        <span class="logo-mark">●</span> DAPOER <i>Tiny</i>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Beranda</a></li>
+        <li><a href="#menu" class="nav-link">Koleksi Menu</a></li>
+        <li><a href="#philosophy" class="nav-link">Keunggulan Rasa</a></li>
+        <li><a href="#spotlight" class="nav-link">Menu Spesial Hari Ini</a></li>
+        <li><a href="#reviews" class="nav-link">Ulasan Pembeli</a></li>
+        <li><a href="#catering" class="nav-link">Katering &amp; Event</a></li>
+      </ul>
+
+      <!-- Nav Actions (Search, Wishlist, Cart, Mobile Toggle) -->
+      <div class="nav-right">
+        <a href="#menuSearchInput" class="icon-btn" aria-label="Cari Menu" title="Cari Menu">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <button type="button" class="icon-btn wishlist-nav-btn" id="wishlistNavBtn" aria-label="Menu Favorit" title="Menu Favorit">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </button>
+        <button type="button" class="cart-btn" id="openCartBtn" aria-label="Buka Keranjang Pesanan" title="Keranjang Belanja">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#spotlight" class="btn btn-primary btn-sm desktop-only-btn">Pesan Online</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Buka Menu Navigasi">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-link">Beranda</a></li>
+        <li><a href="#menu" class="mobile-link">Koleksi Menu Lengkap</a></li>
+        <li><a href="#philosophy" class="mobile-link">Keunggulan Rasa &amp; Bahan</a></li>
+        <li><a href="#spotlight" class="mobile-link">Menu Spesial Chef</a></li>
+        <li><a href="#reviews" class="mobile-link">Ulasan Pelanggan</a></li>
+        <li><a href="#catering" class="mobile-link">Katering Acara &amp; Pesta</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="https://wa.me/628123456789" target="_blank" class="btn btn-brown-primary w-100">
+          <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Kami
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (Split Editorial Layout) -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+
+      <!-- Top Announcement Row -->
+      <div class="hero-top-row reveal-on-scroll">
+        <div class="notice-badge">
+          <span class="pulse-dot"></span>
+          RESEP OTENTIK RUMAHAN DENGAN SENTUHAN GOURMET MODERN
+        </div>
+        <div class="quick-category-pills">
+          <a href="#menu" class="cat-pill active">DISHES</a>
+          <a href="#menu" class="cat-pill">BAKERY</a>
+          <a href="#menu" class="cat-pill">PASTRY</a>
+        </div>
+      </div>
+
+      <!-- Main Editorial Headline -->
+      <div class="hero-main-title reveal-on-scroll">
+        <h1>Artisan Food <i>Kitchen</i></h1>
+      </div>
+
+      <!-- Split Layout Grid: Left Feature Card + Right Mini Menu Cards -->
+      <div class="hero-grid">
+
+        <!-- LEFT COLUMN: Main Feature Feast + Brown Accent Card -->
+        <div class="hero-left-col reveal-on-scroll">
+
+          <!-- Big Visual Card with Feast Photo &amp; Floating Product Widget -->
+          <div class="hero-featured-card">
+            <!-- Ticker Sub-headers -->
+            <div class="card-ticker">
+              <span>RESEP RAHASIA WARISAN</span>
+              <span>BAHAN ORGANIK SEGAR PILIHAN</span>
+              <span>DIBUAT HANGAT SETIAP PESANAN</span>
+            </div>
+
+            <!-- Food Visual Container -->
+            <div class="model-image-container">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Dapoer Tiny Gourmet Feast" class="hero-model-img">
+              <div class="image-gradient-overlay"></div>
+            </div>
+
+            <!-- Floating Overlay Dish Card (Bottom Left) -->
+            <div class="floating-product-card">
+              <div class="floating-bottle-thumb">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=260&amp;q=80" alt="Gourmet Bowl Dapoer Tiny">
+              </div>
+              <div class="floating-content">
+                <h4>Signature Warm Nourish Bowl</h4>
+                <p>Kombinasi protein panggang rempah pilihan, quinoa organik, alpukat segar &amp; saus wijen sangrai khas Dapoer Tiny.</p>
+                <div class="floating-bottom-row">
+                  <span class="product-price">Rp 85.000</span>
+                  <button type="button" class="btn-circle-action" onclick="addToCartItem({id: 'hero-1', name: 'Signature Warm Nourish Bowl', price: 85000, image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=260&amp;q=80'})" title="Tambah ke Pesanan" aria-label="Tambah Signature Warm Nourish Bowl ke keranjang">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <button type="button" class="explore-pill" onclick="openQuickView({id: 'hero-1', name: 'Signature Warm Nourish Bowl', price: 85000, category: 'Mains', desc: 'Kombinasi protein panggang rempah pilihan, quinoa organik, alpukat segar, brokoli kukus renyah, edamame manis, dan siraman saus wijen sangrai racikan otentik dapur kami.', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                    DETAIL MENU <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Culinary Brown Accent Banner (Under Left Hero) -->
+          <div class="skincare-brown-card" id="philosophy">
+            <div class="skincare-text">
+              <span class="badge-sub">KOMITMEN KUALITAS DAPOER TINY</span>
+              <h2>Cita Rasa Hangat Yang Menghidupkan Suasana Rumah</h2>
+              <p>Di Dapoer Tiny, setiap hidangan dimasak dari hati dengan bahan baku pilihan terbaik tanpa MSG berlebihan, tanpa pewarna buatan, dan tanpa pengawet. Kami menghadirkan aroma dan kehangatan sejati langsung ke meja makan Anda.</p>
+
+              <ul class="benefit-list">
+                <li><i class="fa-solid fa-circle-check"></i> 100% Halal &amp; Bahan Segar Pilihan Petani Lokal</li>
+                <li><i class="fa-solid fa-circle-check"></i> Slow-cooked &amp; Baked Fresh Sesuai Pesanan</li>
+                <li><i class="fa-solid fa-circle-check"></i> Kemasan Food-Grade Ramah Lingkungan &amp; Higienis</li>
+                <li><i class="fa-solid fa-circle-check"></i> Garansi Citarasa Lezat Sampai ke Tangan Anda</li>
+              </ul>
+
+              <a href="#menu" class="btn btn-outline-white">Eksplorasi Katalog Menu</a>
+            </div>
+            <div class="skincare-photo">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Chef Plating Gourmet Dish">
+              <div class="photo-badge">
+                <strong>4.9/5.0</strong>
+                <span>Rating 1.200+ Pelanggan Setia</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: 2x2 Mini Food Cards + Accordion Categories + Bakery Banner -->
+        <div class="hero-right-col reveal-on-scroll">
+
+          <!-- 2x2 Mini Food Cards -->
+          <div class="mini-product-grid">
+
+            <!-- Card 1 -->
+            <div class="mini-prod-card highlight-card">
+              <div class="badge-tag">Favorit Pelanggan</div>
+              <div class="prod-img-box">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Slow-Cooked Herb Ribs">
+              </div>
+              <div class="mini-prod-info">
+                <span class="brand-tag">SIGNATURE MAINS</span>
+                <span class="prod-price">Rp 145.000</span>
+              </div>
+              <p class="prod-desc">Daging panggang rempah empuk dengan siraman glazuur madu karamel.</p>
+              <button type="button" class="btn btn-brown-sm w-100" onclick="addToCartItem({id: 'mini-1', name: 'Slow-Cooked Herb Ribs', price: 145000, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
+              </button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="mini-prod-card">
+              <div class="prod-img-box">
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Creamy Truffle Pasta">
+              </div>
+              <div class="mini-prod-info">
+                <span class="brand-tag">PASTA SPECIALTY</span>
+                <span class="prod-price">Rp 78.000</span>
+              </div>
+              <p class="prod-desc">Pasta buatan tangan dengan saus krim truffle harum &amp; keju parmesan asli.</p>
+              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-2', name: 'Creamy Truffle Pasta', price: 78000, image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
+              </button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="mini-prod-card">
+              <div class="prod-img-box">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Artisan Sourdough Loaf">
+              </div>
+              <div class="mini-prod-info">
+                <span class="brand-tag">ARTISAN BAKERY</span>
+                <span class="prod-price">Rp 48.000</span>
+              </div>
+              <p class="prod-desc">Roti sourdough fermentasi alami 36 jam, renyah di luar, lembut kenyal di dalam.</p>
+              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-3', name: 'Artisan Sourdough Loaf', price: 48000, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
+              </button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="mini-prod-card">
+              <div class="prod-img-box">
+                <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Cinnamon Butter Pastry">
+              </div>
+              <div class="mini-prod-info">
+                <span class="brand-tag">SWEET PASTRY</span>
+                <span class="prod-price">Rp 35.000</span>
+              </div>
+              <p class="prod-desc">Pastry gulung mentega New Zealand dengan aroma kayu manis aromatik.</p>
+              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-4', name: 'Cinnamon Butter Pastry', price: 35000, image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Category Accordion Box -->
+          <div class="category-accordion-box">
+            <a href="#menu" class="acc-row" onclick="filterByCategory('bakery')">
+              <span class="acc-title">Artisan Sourdough &amp; <i>Bakery</i></span>
+              <span class="acc-action"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="#menu" class="acc-row" onclick="filterByCategory('mains')">
+              <span class="acc-title">Slow-Cooked <i>Gourmet Dishes</i></span>
+              <span class="acc-action"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="#catering" class="acc-row">
+              <span class="acc-title">Family Feast <i>&amp; Custom Catering</i></span>
+              <span class="acc-action"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+
+          <!-- Hand &amp; Artisan Kitchen Banner -->
+          <div class="body-shampoo-banner">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Artisan Hand Kneaded Dough" class="banner-bg-img">
+            <div class="banner-content">
+              <span class="micro-badge">FRESH FROM OUR OVEN</span>
+              <h3>Artisan <i>Pastry &amp; Loaf</i></h3>
+              <a href="#menu" class="btn btn-white-pill">Pesan Fresh Hari Ini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCT / MENU COLLECTION SECTION -->
+  <section class="products-section" id="menu">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header reveal-on-scroll">
+        <div>
+          <span class="badge-sub">PILIHAN TERBAIK DAPOER TINY</span>
+          <h2 class="section-title">Menu <i>Collection</i></h2>
+        </div>
+
+        <!-- Live Search Bar -->
+        <div class="search-filter-wrap">
+          <div class="menu-search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="menuSearchInput" placeholder="Cari nama menu, misal: sirloin, croissant, truffle..." class="search-input">
+            <button type="button" class="clear-search-btn" id="clearSearchBtn" title="Hapus pencarian" aria-label="Hapus pencarian"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="filter-tabs">
+          <button type="button" class="filter-btn active" data-filter="all">Semua Menu</button>
+          <button type="button" class="filter-btn" data-filter="mains">Main Course</button>
+          <button type="button" class="filter-btn" data-filter="bakery">Bakery &amp; Pastry</button>
+          <button type="button" class="filter-btn" data-filter="dessert">Dessert</button>
+        </div>
+      </div>
+
+      <!-- Live Search Status Indicator -->
+      <div class="search-results-info" id="searchResultsInfo"></div>
+
+      <!-- 6-Product Menu Grid -->
+      <div class="products-grid" id="menuGrid">
+
+        <!-- Menu Item 1 -->
+        <div class="product-card" data-category="mains" data-name="herb roasted beef sirloin daging sapi">
+          <div class="prod-badge">Chef's Special</div>
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Herb Roasted Beef Sirloin">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-1', name: 'Herb Roasted Beef Sirloin', price: 155000, category: 'Main Course', desc: 'Daging sapi sirloin Australia kualitas tinggi dimarinasi 24 jam dengan daun rosemary segar, thyme, dan bumbu kaldu kaldu gurih yang dipanggang secara presisi.', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Herb Roasted Beef Sirloin')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Herb Roasted Beef Sirloin dari favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">GOURMET MEAT</span>
+            <h3 class="prod-name">Herb Roasted Beef Sirloin</h3>
+            <p class="prod-meta">Daging sirloin pilihan dimasak lambat 12 jam dengan rosemary dan bumbu kaldu gurih.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 155.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-1', name: 'Herb Roasted Beef Sirloin', price: 155000, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 2 -->
+        <div class="product-card" data-category="mains" data-name="rosemary garlic roast chicken ayam panggang">
+          <div class="prod-badge">Best Seller</div>
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Rosemary Garlic Roast Chicken">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-2', name: 'Rosemary Garlic Roast Chicken', price: 120000, category: 'Main Course', desc: 'Ayam utuh pilihan dimarinasi dengan bawang putih sangrai, garam laut, butter perancis, dan rosemary segar. Daging juicy luar biasa lembut.', image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Rosemary Garlic Roast Chicken')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Rosemary Garlic Roast Chicken dari favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">SIGNATURE POULTRY</span>
+            <h3 class="prod-name">Rosemary Garlic Roast Chicken</h3>
+            <p class="prod-meta">Ayam panggang utuh bumbu bawang putih panggang, kulit keemasan renyah dan daging sangat juicy.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 120.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-2', name: 'Rosemary Garlic Roast Chicken', price: 120000, image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 3 -->
+        <div class="product-card" data-category="mains" data-name="mushroom truffle fettuccine pasta creamy">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Creamy Mushroom Truffle Pasta">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-3', name: 'Mushroom Truffle Fettuccine', price: 82000, category: 'Pasta Artisan', desc: 'Pasta fettuccine buatan tangan dengan saus krim lembut, potongan jamur portobello gurih, minyak truffle putih aromatik, dan limpahan parmesan.', image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Mushroom Truffle Fettuccine')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Mushroom Truffle Fettuccine dari favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">PASTA ARTISAN</span>
+            <h3 class="prod-name">Mushroom Truffle Fettuccine</h3>
+            <p class="prod-meta">Fettuccine fresh dengan jamur champignon, sentuhan minyak truffle putih dan parutan Grana Padano.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 82.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-3', name: 'Mushroom Truffle Fettuccine', price: 82000, image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 4 -->
+        <div class="product-card" data-category="bakery" data-name="country sourdough boule roti gandum ragi">
+          <div class="prod-badge discount">Diskon 10%</div>
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Country Sourdough Bread">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-4', name: 'Country Sourdough Boule', price: 49500, category: 'Bakery', desc: 'Roti sourdough fermentasi lambat 36 jam menggunakan ragi liar alami. Tanpa bahan kimia, tanpa pengawet. Tekstur luar renyah berkarakter.', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Country Sourdough Boule')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Country Sourdough Boule dari favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">FERMENTED BAKERY</span>
+            <h3 class="prod-name">Country Sourdough Boule</h3>
+            <p class="prod-meta">Roti gandum ragi alami tanpa pengembang kimiawi, ramah pencernaan dan wangi khas.</p>
+            <div class="product-footer">
+              <span class="price-val"><del>Rp 55.000</del> Rp 49.500</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-4', name: 'Country Sourdough Boule', price: 49500, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 5 -->
+        <div class="product-card" data-category="bakery" data-name="butter croissant box isi 4 pastry french">
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Butter Flaky Croissant Box">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-5', name: 'Butter Croissant Box (Isi 4)', price: 68000, category: 'French Pastry', desc: 'Satu box berisi 4 buah croissant dengan lapisan butter Prancis harum yang melepuh sempurna saat digigit. Teman terbaik secangkir kopi pagi.', image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Butter Croissant Box (Isi 4)')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Butter Croissant Box (Isi 4) dari favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">FRENCH PASTRY</span>
+            <h3 class="prod-name">Butter Croissant Box (Isi 4)</h3>
+            <p class="prod-meta">Croissant berlapis renyah dengan aroma butter Prancis autentik, dipanggang hangat tiap pagi.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 68.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-5', name: 'Butter Croissant Box (Isi 4)', price: 68000, image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 6 -->
+        <div class="product-card" data-category="dessert" data-name="classic mascarpone tiramisu dessert manis cake">
+          <div class="prod-badge">Signature Dessert</div>
+          <div class="prod-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Classic Tiramisu Melts">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-6', name: 'Classic Mascarpone Tiramisu', price: 58000, category: 'Dessert', desc: 'Dessert klasik Italia autentik: biskuit Savoiardi diseduh kopi espresso pekat, dilapisi krim keju mascarpone halus dan bubuk kakao murni tanpa pemanis berlebih.', image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Classic Mascarpone Tiramisu')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Classic Mascarpone Tiramisu dari favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">ITALIAN SWEETS</span>
+            <h3 class="prod-name">Classic Mascarpone Tiramisu</h3>
+            <p class="prod-meta">Ladyfingers rendaman espresso aromatik, krim mascarpone lembut dan taburan cocoa murni.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 58.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-6', name: 'Classic Mascarpone Tiramisu', price: 58000, image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED SPOTLIGHT DISH SECTION (Interactive Order Details) -->
+  <section class="spotlight-section" id="spotlight">
+    <div class="container">
+      <div class="spotlight-card reveal-on-scroll">
+
+        <!-- Left: Dish Visual Showcase Gallery -->
+        <div class="spotlight-gallery">
+          <div class="spotlight-main-img">
+            <img id="mainProductImg" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Slow-Cooked Caramelized Beef">
+            <div class="zoom-badge"><i class="fa-solid fa-fire"></i> Fresh From Oven</div>
+          </div>
+          <div class="thumbnail-row">
+            <button type="button" class="thumb-btn active" onclick="switchImage(this, 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Porsi Reguler">
+            </button>
+            <button type="button" class="thumb-btn" onclick="switchImage(this, 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Paket Feast">
+            </button>
+            <button type="button" class="thumb-btn" onclick="switchImage(this, 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Plating Sajian">
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Dish Purchase &amp; Portion Customization -->
+        <div class="spotlight-details">
+
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="rating-text"><strong>5.0</strong> (320+ Ulasan Puas Pelanggan)</span>
+            <span class="stock-badge"><i class="fa-solid fa-check"></i> Siap Dimasak &amp; Dikirim Hangat</span>
+          </div>
+
+          <h2 class="spotlight-title">Dapoer Tiny — <i>Slow-Cooked Caramelized Beef</i></h2>
+          <p class="spotlight-tagline">Tender Australian Beef with House-made Caramelized Herb Glaze</p>
+
+          <div class="spotlight-price-box">
+            <span class="current-price" id="spotlightPrice">Rp 145.000</span>
+            <span class="tax-note">Termasuk Kondimen Sambal &amp; Sayuran Panggang</span>
+          </div>
+
+          <p class="spotlight-desc">
+            Sajian primadona Dapoer Tiny menggunakan daging sapi sirloin berkualitas tinggi yang dimarinasi selama 24 jam dengan rempah dapur pilihan, lalu dipanggang lambat hingga teksturnya sangat empuk dan meresap sempurna sampai ke serat terdalam.
+          </p>
+
+          <!-- Portion / Size Selector -->
+          <div class="selector-group">
+            <label class="selector-label">Pilih Paket Porsi:</label>
+            <div class="size-options">
+              <button type="button" class="size-btn active" data-portion="1 Porsi Personal" data-price="145000" onclick="selectSize(this, 145000, '1 Porsi Personal')">1 Porsi Personal</button>
+              <button type="button" class="size-btn" data-portion="Paket Duo (2 Porsi)" data-price="275000" onclick="selectSize(this, 275000, 'Paket Duo (2 Porsi)')">Paket Duo (2 Porsi)</button>
+              <button type="button" class="size-btn" data-portion="Family Pack (4 Porsi)" data-price="490000" onclick="selectSize(this, 490000, 'Family Pack (4 Porsi)')">Family Pack (4 Porsi)</button>
+              <button type="button" class="size-btn" data-portion="Party Platter (8 Porsi)" data-price="950000" onclick="selectSize(this, 950000, 'Party Platter (8 Porsi)')">Party Platter (8 Porsi)</button>
+            </div>
+          </div>
+
+          <!-- Quantity and Add to Cart Row -->
+          <div class="purchase-row">
+            <div class="qty-counter">
+              <button type="button" class="qty-btn" onclick="changeQty(-1)" aria-label="Kurangi jumlah porsi"><i class="fa-solid fa-minus"></i></button>
+              <span class="qty-num" id="qtyVal">1</span>
+              <button type="button" class="qty-btn" onclick="changeQty(1)" aria-label="Tambah jumlah porsi"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <button type="button" class="btn btn-brown-primary flex-grow" id="addSpotlightBtn" onclick="addSpotlightToCart()">
+              <i class="fa-solid fa-bag-shopping"></i> Tambahkan ke Keranjang
+            </button>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-grid">
+            <div class="trust-item">
+              <i class="fa-solid fa-motorcycle"></i>
+              <div>
+                <strong>Pengiriman Cepat</strong>
+                <span>Instant &amp; Sameday delivery</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <strong>Higienis Terjamin</strong>
+                <span>Dapur bersih standar tinggi</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-heart"></i>
+              <div>
+                <strong>Garansi Nikmat</strong>
+                <span>100% kepuasan rasa</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS / TESTIMONIALS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+
+      <div class="section-center-header reveal-on-scroll">
+        <span class="badge-sub">KATA MEREKA TENTANG DAPOER TINY</span>
+        <h2 class="section-title">Cerita &amp; Ulasan <i>Pelanggan</i></h2>
+        <p class="section-lead">Lebih dari seribu keluarga dan penikmat kuliner mempercayakan momen santap hangat mereka bersama Dapoer Tiny.</p>
+      </div>
+
+      <div class="reviews-grid reveal-on-scroll">
+
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Slow-cooked beef-nya benar-benar juara! Dagingnya lumer di mulut dan bumbu glazuurnya manis gurih pas sekali. Keluarga sampai minta pesan lagi untuk makan malam akhir pekan."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="Sarah Amanda">
+            </div>
+            <div>
+              <h4 class="reviewer-name">Sarah Amanda</h4>
+              <span class="reviewer-badge"><i class="fa-solid fa-circle-check"></i> Pembeli Terverifikasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Sourdough-nya punya crust yang renyah dan crumb yang chewy sempurna! Sangat bersahabat di lambung karena fermentasi alami. Pengirimannya juga rapi dan masih hangat saat tiba."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="Dimas Pratama">
+            </div>
+            <div>
+              <h4 class="reviewer-name">Dimas Pratama</h4>
+              <span class="reviewer-badge"><i class="fa-solid fa-circle-check"></i> Pembeli Terverifikasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Pesan paket katering untuk syukuran kantor 35 pax, semua kolega memuji citarasa makanannya. Pelayanannya sangat ramah dan presentasi packaging-nya estetik premium!"</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="Nathalia Kusuma">
+            </div>
+            <div>
+              <h4 class="reviewer-name">Nathalia Kusuma</h4>
+              <span class="reviewer-badge"><i class="fa-solid fa-circle-check"></i> Pembeli Terverifikasi</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / CATERING SPECIAL -->
+  <section class="newsletter-section" id="catering">
+    <div class="container newsletter-box reveal-on-scroll">
+      <div class="newsletter-content">
+        <span class="badge-sub-light">PAKET KATERING &amp; SPECIAL OCCASIONS</span>
+        <h2>Rencanakan Acara &amp; Santap Bersama Dapoer Tiny</h2>
+        <p>Butuh menu tumpeng mini gourmet, hantaran box eksklusif, atau katering pesta keluarga? Konsultasikan menu khusus Anda langsung bersama tim dapur kami.</p>
+
+        <form class="newsletter-form" id="cateringForm">
+          <input type="text" id="cateringContactInput" placeholder="Masukkan nomor WhatsApp atau Email Anda..." required class="newsletter-input">
+          <button type="submit" class="btn btn-newsletter">Konsultasi Menu Gratis</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="#" class="brand-logo footer-logo">
+          <span class="logo-mark">●</span> DAPOER <i>Tiny</i>
+        </a>
+        <p class="brand-bio">
+          Dapur artisan dengan dedikasi menyajikan makanan lezat bermutu tinggi, roti fresh, dan menu hidangan keluarga yang dibuat fresh setiap hari.
+        </p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/628123456789" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Koleksi Menu</h4>
+        <ul>
+          <li><a href="#menu">Main Course Daging &amp; Unggas</a></li>
+          <li><a href="#menu">Artisan Sourdough &amp; Pastry</a></li>
+          <li><a href="#menu">Gourmet Pasta &amp; Noodle</a></li>
+          <li><a href="#menu">Family Feast Box</a></li>
+          <li><a href="#menu">Dessert &amp; Puding Lembut</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Layanan Dapur</h4>
+        <ul>
+          <li><a href="#philosophy">Filosofi &amp; Bahan Kami</a></li>
+          <li><a href="#catering">Katering Kantor &amp; Rumah</a></li>
+          <li><a href="#catering">Hantaran &amp; Hampers Hari Raya</a></li>
+          <li><a href="#catering">Custom Menu Diet &amp; Alergi</a></li>
+          <li><a href="#catering">Area Jangkauan Pengiriman</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak &amp; Pemesanan</h4>
+        <ul>
+          <li><a href="https://wa.me/628123456789"><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890</a></li>
+          <li><a href="mailto:order@dapoertiny.com"><i class="fa-regular fa-envelope"></i> order@dapoertiny.com</a></li>
+          <li><span><i class="fa-regular fa-clock"></i> 08:00 - 20:00 WIB</span></li>
+          <li><span><i class="fa-solid fa-location-dot"></i> Jabodetabek (Instant Courier)</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Dapoer Tiny Culinary &amp; Kitchen. Hak Cipta Dilindungi Undang-Undang.</p>
+      <div class="bottom-links">
+        <a href="#">Syarat &amp; Ketentuan Pemesanan</a>
+        <a href="#">Kebijakan Privasi</a>
+        <a href="#">Kebijakan Pengiriman Hangat</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS &amp; DRAWERS ==================== -->
+
+  <!-- SLIDE-OVER CART DRAWER -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <i class="fa-solid fa-bag-shopping cart-title-icon"></i>
+        <h3 id="cartDrawerTitle">Keranjang Pesanan</h3>
+        <span class="cart-items-tag" id="cartItemsTag">0 item</span>
+      </div>
+      <button type="button" class="cart-close-btn" onclick="closeCart()" aria-label="Tutup Keranjang">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress Tracker -->
+    <div class="delivery-tracker">
+      <div class="tracker-text" id="trackerText">
+        <i class="fa-solid fa-truck-fast"></i> Tambah <strong>Rp 100.000</strong> lagi untuk <strong>Gratis Ongkir!</strong>
+      </div>
+      <div class="tracker-bar-bg">
+        <div class="tracker-bar-fill" id="trackerFill"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scrollable List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated via JavaScript -->
+    </div>
+
+    <!-- Cart Footer &amp; Checkout Summary -->
+    <div class="cart-drawer-footer">
+      <div class="summary-line">
+        <span>Subtotal Menu:</span>
+        <strong id="cartSubtotal">Rp 0</strong>
+      </div>
+      <div class="summary-line">
+        <span>Biaya Pengiriman:</span>
+        <span id="cartShipping">Rp 15.000</span>
+      </div>
+      <div class="summary-line total-line">
+        <span>Total Pesanan:</span>
+        <strong class="grand-total" id="cartGrandTotal">Rp 0</strong>
+      </div>
+      <button type="button" class="btn btn-brown-primary w-100 checkout-btn" id="checkoutBtn" onclick="processCheckout()">
+        <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp Sekarang
+      </button>
+      <button type="button" class="clear-cart-btn" onclick="clearCart()">Kosongkan Keranjang</button>
+    </div>
+  </aside>
+
+  <!-- QUICK VIEW DISH MODAL -->
+  <div class="modal-backdrop" id="quickViewBackdrop" onclick="closeQuickView()"></div>
+  <div class="quick-view-modal" id="quickViewModal" role="dialog" aria-modal="true">
+    <button type="button" class="modal-close-btn" onclick="closeQuickView()" aria-label="Tutup Detail">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="quick-view-grid">
+      <div class="quick-view-img-box">
+        <img id="qvImage" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Pratinjau detail menu">
+      </div>
+      <div class="quick-view-info">
+        <span class="badge-sub" id="qvCategory">KATEGORI MENU</span>
+        <h3 class="qv-title" id="qvTitle">Nama Hidangan</h3>
+        <div class="qv-price" id="qvPrice">Rp 0</div>
+        <p class="qv-desc" id="qvDesc">Deskripsi detail hidangan...</p>
+
+        <div class="qv-perks">
+          <span><i class="fa-solid fa-check"></i> Fresh Made</span>
+          <span><i class="fa-solid fa-check"></i> Tanpa Pengawet</span>
+          <span><i class="fa-solid fa-check"></i> 100% Halal</span>
+        </div>
+
+        <div class="qv-action-row">
+          <div class="qty-counter">
+            <button type="button" class="qty-btn" onclick="changeQvQty(-1)" aria-label="Kurangi jumlah pesanan"><i class="fa-solid fa-minus"></i></button>
+            <span class="qty-num" id="qvQtyVal">1</span>
+            <button type="button" class="qty-btn" onclick="changeQvQty(1)" aria-label="Tambah jumlah pesanan"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          <button type="button" class="btn btn-brown-primary flex-grow" id="qvAddToCartBtn" onclick="addQvToCart()">
+            <i class="fa-solid fa-cart-plus"></i> Tambah ke Keranjang
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON -->
+  <a href="https://wa.me/628123456789?text=Halo%20Dapoer%20Tiny,%20saya%20ingin%20tanya%20menu%20dan%20pemesanan" target="_blank" rel="noopener" class="floating-wa-btn" title="Chat WhatsApp Langsung">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-tooltip">Pesan Cepat via WA</span>
+  </a>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="cart-toast" id="cartToast">
+    <i class="fa-solid fa-circle-check" id="toastIcon"></i>
+    <span id="toastMsg">Menu berhasil ditambahkan ke keranjang!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
