@@ -274,7 +274,7 @@ function processCheckout() {
   message += `*TOTAL PEMBAYARAN: ${formatRupiah(grandTotal)}*\n\n`;
   message += `Mohon konfirmasi ketersediaan dan metode pengirimannya. Terima kasih!`;
 
-  const waUrl = `https://wa.me/628123456789?text=${encodeURIComponent(message)}`;
+  const waUrl = `https://wa.me/6282146292505?text=${encodeURIComponent(message)}`;
   window.open(waUrl, '_blank');
 }
 
@@ -422,7 +422,24 @@ function filterMenu() {
 
   if (resultsInfo) {
     if (query.length > 0) {
-      resultsInfo.innerHTML = `Menemukan <strong>${visibleCount}</strong> menu untuk kata kunci <em>"${query}"</em>`;
+      if (visibleCount > 0) {
+        resultsInfo.innerHTML = `Menemukan <strong>${visibleCount}</strong> dari 10 menu untuk kata kunci <em>"${query}"</em>`;
+      } else {
+        resultsInfo.innerHTML = `
+          <div class="no-search-results">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p>Tidak ada menu yang cocok dengan kata kunci <em>"${query}"</em>.</p>
+            <button type="button" class="btn btn-brown-sm" onclick="resetSearchAndFilter()">Lihat Semua 10 Menu</button>
+          </div>
+        `;
+      }
+    } else if (category !== 'all') {
+      const categoryNames = {
+        'makanan': 'Makanan Utama (3 menu)',
+        'pelengkap': 'Lauk & Nasi (3 menu)',
+        'minuman': 'Minuman Segar (4 menu)'
+      };
+      resultsInfo.innerHTML = `Menampilkan kategori: <strong>${categoryNames[category] || category}</strong> (${visibleCount} menu)`;
     } else {
       resultsInfo.innerHTML = '';
     }
@@ -431,6 +448,8 @@ function filterMenu() {
 
 function filterByCategory(category) {
   state.activeCategory = category;
+
+  // Update Menu Section filter tabs
   document.querySelectorAll('.filter-btn').forEach(btn => {
     if (btn.getAttribute('data-filter') === category) {
       btn.classList.add('active');
@@ -438,7 +457,24 @@ function filterByCategory(category) {
       btn.classList.remove('active');
     }
   });
+
+  // Synchronize Hero Category Pills
+  document.querySelectorAll('.cat-pill').forEach(pill => {
+    const onclickAttr = pill.getAttribute('onclick') || '';
+    if (onclickAttr.includes(`'${category}'`)) {
+      pill.classList.add('active');
+    } else {
+      pill.classList.remove('active');
+    }
+  });
+
   filterMenu();
+}
+
+function resetSearchAndFilter() {
+  const searchInput = document.getElementById('menuSearchInput');
+  if (searchInput) searchInput.value = '';
+  filterByCategory('all');
 }
 
 // ==========================================================================
@@ -582,7 +618,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const contactVal = document.getElementById('cateringContactInput').value.trim();
       const waMsg = `Halo Dapoer Tiny, saya ingin konsultasi paket katering/acara. Kontak saya: ${contactVal}`;
-      window.open(`https://wa.me/628123456789?text=${encodeURIComponent(waMsg)}`, '_blank');
+      window.open(`https://wa.me/6282146292505?text=${encodeURIComponent(waMsg)}`, '_blank');
       showToast('Permintaan konsultasi Anda telah dikirim via WhatsApp!');
       cateringForm.reset();
     });
