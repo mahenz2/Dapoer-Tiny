@@ -100,9 +100,12 @@ function addToCartItem(item) {
 
   saveCartToStorage();
   renderCart();
-  openCart();
-
-  showToast(`${qtyToAdd}x "${item.name}" berhasil masuk keranjang!`);
+  if (document.getElementById('cartDrawer')) {
+    openCart();
+    showToast(`${qtyToAdd}x "${item.name}" berhasil masuk keranjang!`);
+  } else {
+    window.location.href = 'keranjang.html';
+  }
 }
 
 // Update Cart Quantity
@@ -196,7 +199,7 @@ function renderCart() {
           <i class="fa-solid fa-basket-shopping"></i>
           <h4>Keranjang Anda Kosong</h4>
           <p>Yuk, pilih menu lezat favorit Anda dari Dapoer Tiny dan nikmati santap hangat bersama keluarga.</p>
-          <a href="#menu" class="btn btn-brown-sm" onclick="closeCart()">Jelajahi Menu Sekarang</a>
+          <a href="daftar-menu.html" class="btn btn-brown-sm" onclick="closeCart()">Jelajahi Menu Sekarang</a>
         </div>
       `;
     } else {
@@ -502,6 +505,24 @@ function toggleWishlist(button, dishName) {
     showToast(`"${dishName}" ditambahkan ke favorit! ❤️`, 'fa-solid fa-heart');
   }
 
+  try {
+    localStorage.setItem('dapoer_tiny_wishlist', JSON.stringify([...state.wishlist]));
+  } catch (e) {
+    console.error('Gagal menyimpan menu favorit:', e);
+  }
+
+  document.querySelectorAll('.wishlist-btn').forEach(wishlistButton => {
+    const isSelected = wishlistButton.getAttribute('aria-label')?.includes(dishName)
+      || wishlistButton.closest('.product-card')?.querySelector('.prod-name')?.textContent.trim() === dishName;
+    if (!isSelected) return;
+    wishlistButton.classList.toggle('active', state.wishlist.has(dishName));
+    const wishlistIcon = wishlistButton.querySelector('i');
+    if (wishlistIcon) {
+      wishlistIcon.classList.toggle('fa-solid', state.wishlist.has(dishName));
+      wishlistIcon.classList.toggle('fa-regular', !state.wishlist.has(dishName));
+    }
+  });
+
   if (wishlistBadge) {
     wishlistBadge.textContent = state.wishlist.size;
     if (state.wishlist.size > 0) {
@@ -545,6 +566,27 @@ function initScrollAnimations() {
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Storage & State
   initCartFromStorage();
+  try {
+    const savedWishlist = JSON.parse(localStorage.getItem('dapoer_tiny_wishlist') || '[]');
+    state.wishlist = new Set(Array.isArray(savedWishlist) ? savedWishlist : []);
+  } catch (e) {
+    state.wishlist = new Set();
+  }
+  const wishlistCount = document.getElementById('wishlistCount');
+  if (wishlistCount) {
+    wishlistCount.textContent = state.wishlist.size;
+    wishlistCount.classList.toggle('has-items', state.wishlist.size > 0);
+  }
+  document.querySelectorAll('.wishlist-btn').forEach(button => {
+    const dishName = button.closest('.product-card')?.querySelector('.prod-name')?.textContent.trim();
+    if (!dishName || !state.wishlist.has(dishName)) return;
+    button.classList.add('active');
+    const icon = button.querySelector('i');
+    if (icon) {
+      icon.classList.remove('fa-regular');
+      icon.classList.add('fa-solid');
+    }
+  });
   initScrollAnimations();
 
   // Cart Button Triggers
@@ -556,6 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sticky Navbar Scroll Listener
   const navbar = document.getElementById('mainNavbar');
   window.addEventListener('scroll', () => {
+    if (!navbar) return;
     if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
     } else {

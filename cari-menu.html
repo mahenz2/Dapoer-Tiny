@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cari Menu — Dapoer Tiny</title>
+  <meta name="description" content="Cari makanan, lauk, dan minuman di daftar menu Dapoer Tiny.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23A55704'/><text x='50' y='65' font-size='42' font-family='serif' fill='white' text-anchor='middle'>D</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=20261027-pages">
+  <link rel="stylesheet" href="pages.css?v=20261027-pages">
+</head>
+<body>
+  <nav class="main-nav" id="mainNavbar" aria-label="Navigasi utama">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo" aria-label="Dapoer Tiny, Beranda"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M10 12c2-2-1-3 1-5m5 5c2-2-1-3 1-5m4 5c2-2-1-3 1-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/><path d="M7 16h18c-.7 5-4 8-9 8s-8.3-3-9-8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/><path d="M10 27h12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg></span> DAPOER <i>Tiny</i></a>
+      <ul class="nav-links"><li><a href="index.html" class="nav-link">Beranda</a></li><li><a href="daftar-menu.html" class="nav-link">Daftar Menu</a></li><li><a href="menu-spesial.html" class="nav-link">Menu Spesial</a></li><li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li><li><a href="katering.html" class="nav-link">Katering &amp; Nasi Box</a></li><li><a href="kontak.html" class="nav-link">Kontak</a></li></ul>
+      <div class="nav-right">
+        <a href="cari-menu.html" class="icon-btn" aria-current="page" aria-label="Cari Menu" title="Cari Menu"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="favorit.html" class="icon-btn wishlist-nav-btn" aria-label="Menu Favorit" title="Menu Favorit"><i class="fa-regular fa-heart"></i><span class="wishlist-count" id="wishlistCount">0</span></a>
+        <a href="keranjang.html" class="cart-btn" aria-label="Buka Keranjang Pesanan" title="Keranjang Belanja"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cartCount">0</span></a>
+        <a href="pesan.html" class="btn btn-primary btn-sm desktop-only-btn">Pesan Online</a>
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Buka Menu Navigasi" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+    <div class="mobile-menu-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links"><li><a href="index.html" class="mobile-link">Beranda</a></li><li><a href="daftar-menu.html" class="mobile-link">Daftar Menu</a></li><li><a href="menu-spesial.html" class="mobile-link">Menu Spesial</a></li><li><a href="tentang-kami.html" class="mobile-link">Tentang Kami</a></li><li><a href="katering.html" class="mobile-link">Katering &amp; Nasi Box</a></li><li><a href="kontak.html" class="mobile-link">Kontak</a></li><li><a href="pesan.html" class="mobile-link">Pesan Online</a></li></ul>
+      <div class="mobile-drawer-footer"><a href="https://wa.me/6282146292505" target="_blank" rel="noopener" class="btn btn-brown-primary w-100"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp Kami</a></div>
+    </div>
+  </nav>
+<main><section class="products-section"><div class="container">
+  <div class="page-intro page-intro-inline"><span class="badge-sub">TEMUKAN HIDANGAN FAVORIT</span><h1>Cari <i>Menu</i></h1><p>Ketik nama makanan, lauk, atau minuman yang ingin Anda pesan.</p></div>
+  <div class="search-filter-wrap search-page-input"><div class="menu-search-box"><i class="fa-solid fa-magnifying-glass search-icon"></i><input type="search" id="menuSearchInput" class="search-input" placeholder="Contoh: ayam bakar, es jeruk, sambal..." autofocus><button type="button" class="clear-search-btn" id="clearSearchBtn" title="Hapus pencarian" aria-label="Hapus pencarian"><i class="fa-solid fa-xmark"></i></button></div></div>
+  <div class="filter-tabs search-page-tabs"><button type="button" class="filter-btn active" data-filter="all">Semua Menu</button><button type="button" class="filter-btn" data-filter="makanan">Makanan Utama</button><button type="button" class="filter-btn" data-filter="pelengkap">Lauk &amp; Nasi</button><button type="button" class="filter-btn" data-filter="minuman">Minuman Segar</button></div>
+  <div class="search-results-info" id="searchResultsInfo" aria-live="polite"></div><div class="products-grid" id="searchMenuGrid"></div>
+</div></section></main>
+<!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo footer-logo">
+          <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M10 12c2-2-1-3 1-5m5 5c2-2-1-3 1-5m4 5c2-2-1-3 1-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/><path d="M7 16h18c-.7 5-4 8-9 8s-8.3-3-9-8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/><path d="M10 27h12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/></svg></span> DAPOER <i>Tiny</i>
+        </a>
+        <p class="brand-bio">
+          Dapur kuliner nusantara dengan sajian Ayam Bakar Madu spesial, Gurami Bakar, Pecel Lele Crispy, lauk tahu tempe gurih, dan aneka minuman segar yang dibuat fresh setiap hari.
+        </p>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/6282146292505" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Koleksi Menu</h4>
+        <ul>
+          <li><a href="cari-menu.html?category=makanan">Ayam Bakar Madu Spesial</a></li>
+          <li><a href="cari-menu.html?category=makanan">Gurami Bakar Bumbu Madu</a></li>
+          <li><a href="cari-menu.html?category=makanan">Pecel Lele Goreng Crispy</a></li>
+          <li><a href="cari-menu.html?category=pelengkap">Tahu &amp; Tempe Goreng Gurih</a></li>
+          <li><a href="cari-menu.html?category=minuman">Es Jeruk, Es Teh &amp; Es Gula</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Layanan Dapur</h4>
+        <ul>
+          <li><a href="tentang-kami.html">Filosofi Bumbu &amp; Bahan</a></li>
+          <li><a href="katering.html">Pesanan Nasi Box Kantor &amp; Rumah</a></li>
+          <li><a href="katering.html">Paket Syukuran &amp; Tumpeng Mini</a></li>
+          <li><a href="menu-spesial.html">Paket Hemat Keluarga</a></li>
+          <li><a href="katering.html">Area Pengiriman Hangat</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak &amp; Pemesanan</h4>
+        <ul>
+          <li><a href="https://wa.me/6282146292505" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +62 821-4629-2505</a></li>
+          <li><a href="mailto:order@dapoertiny.com"><i class="fa-regular fa-envelope"></i> order@dapoertiny.com</a></li>
+          <li><span><i class="fa-regular fa-clock"></i> Buka 24 jam setiap hari</span></li>
+          <li><span><i class="fa-solid fa-location-dot"></i> Pengiriman Cepat (Instant Courier)</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Dapoer Tiny — Spesialis Ayam Bakar Madu &amp; Masakan Nusantara. Hak Cipta Dilindungi.</p>
+      <div class="bottom-links">
+        <a href="index.html">Syarat &amp; Ketentuan Pemesanan</a>
+        <a href="index.html">Kebijakan Privasi</a>
+        <a href="index.html">Garansi Pengiriman Hangat</a>
+      </div>
+    </div>
+  </footer>
+  <a href="https://wa.me/6282146292505?text=Halo%20Dapoer%20Tiny,%20saya%20ingin%20tanya%20menu%20dan%20pemesanan" target="_blank" rel="noopener" class="floating-wa-btn" title="Chat WhatsApp Langsung"><i class="fa-brands fa-whatsapp"></i><span class="wa-tooltip">Pesan Cepat via WA</span></a>
+  <div class="cart-toast" id="cartToast"><i class="fa-solid fa-circle-check" id="toastIcon"></i><span id="toastMsg">Menu berhasil ditambahkan ke keranjang!</span></div>
+  
+  <script src="script.js?v=20261027-pages"></script>
+  <script src="pages.js?v=20261027-pages"></script>
+</body>
+</html>

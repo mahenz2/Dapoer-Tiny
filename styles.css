@@ -211,8 +211,21 @@ button {
 }
 
 .brand-logo .logo-mark {
-  color: var(--primary-brown);
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary-brown);
+  color: #FFFFFF;
+}
+
+.brand-logo .logo-mark svg {
+  display: block;
+  width: 23px;
+  height: 23px;
 }
 
 .brand-logo i {

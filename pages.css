@@ -1,0 +1,236 @@
+.page-intro {
+  padding: 62px 0 50px;
+  background: linear-gradient(135deg, #fbf4ec 0%, #fff 60%, #f3e6d8 100%);
+  border-bottom: 1px solid var(--border-brown-subtle);
+}
+
+.page-intro .container,
+.page-intro-inline {
+  max-width: 920px;
+}
+
+.page-intro h1,
+.page-intro-inline h1 {
+  color: var(--dark-espresso);
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+  margin: 8px 0 14px;
+}
+
+.page-intro h1 i,
+.page-intro-inline h1 i {
+  color: var(--primary-brown);
+  font-weight: 400;
+}
+
+.page-intro p,
+.page-intro-inline p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 680px;
+}
+
+.page-intro-inline {
+  margin: 0 auto 36px;
+}
+
+.page-intro-inline .badge-sub {
+  color: var(--primary-brown);
+}
+
+.about-page-section,
+.order-page-section,
+.cart-page-section {
+  padding: 64px 0 84px;
+}
+
+.about-feature-card {
+  margin-bottom: 32px;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.about-values article {
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--border-brown-subtle);
+  border-radius: var(--radius-md);
+}
+
+.about-values article > i {
+  color: var(--primary-brown);
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+.about-values h2 {
+  color: var(--dark-espresso);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.about-values p {
+  color: var(--text-secondary);
+  font-size: .86rem;
+}
+
+.search-page-input {
+  margin: 0 0 16px;
+  max-width: 600px;
+}
+
+.search-page-tabs {
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.search-page-tabs .filter-btn {
+  white-space: nowrap;
+}
+
+.search-results-info:empty {
+  display: none;
+}
+
+.favorite-empty-state {
+  padding: 55px 24px;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed var(--border-brown-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.favorite-empty-state[hidden] {
+  display: none;
+}
+
+.favorite-empty-state > i {
+  display: block;
+  color: var(--primary-brown);
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.favorite-empty-state h2 {
+  color: var(--dark-espresso);
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.favorite-empty-state p {
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.cart-page-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(290px, .8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.cart-page-items,
+.cart-page-summary {
+  background: #fff;
+  border: 1px solid var(--border-brown-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.cart-page-items {
+  padding: 10px 24px;
+  min-height: 250px;
+}
+
+.cart-page-items .cart-items-list {
+  max-height: none;
+  min-height: 230px;
+  overflow: visible;
+  padding: 14px 0;
+}
+
+.cart-page-items .cart-empty-state {
+  min-height: 220px;
+}
+
+.cart-page-summary {
+  padding: 24px;
+}
+
+.cart-page-summary h2 {
+  color: var(--dark-espresso);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.cart-page-summary .delivery-tracker {
+  margin: 14px -24px;
+}
+
+.cart-page-summary .checkout-btn {
+  margin-top: 12px;
+}
+
+.order-options {
+  margin-bottom: 28px;
+}
+
+.order-page-next {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.order-page-next .btn-outline-sm {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-right > .icon-btn[aria-current="page"],
+.nav-right > .cart-btn[aria-current="page"] {
+  color: var(--primary-brown);
+  background: var(--primary-brown-light);
+  outline: 1px solid var(--border-brown-subtle);
+}
+
+@media (max-width: 900px) {
+  .cart-page-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-intro {
+    padding: 42px 0 36px;
+  }
+
+  .about-page-section,
+  .order-page-section,
+  .cart-page-section {
+    padding: 46px 0 60px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .search-page-tabs {
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .order-page-next {
+    flex-direction: column;
+  }
+}
