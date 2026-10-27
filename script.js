@@ -423,21 +423,21 @@ function filterMenu() {
   if (resultsInfo) {
     if (query.length > 0) {
       if (visibleCount > 0) {
-        resultsInfo.innerHTML = `Menemukan <strong>${visibleCount}</strong> dari 10 menu untuk kata kunci <em>"${query}"</em>`;
+        resultsInfo.innerHTML = `Menemukan <strong>${visibleCount}</strong> dari ${cards.length} menu untuk kata kunci <em>"${query}"</em>`;
       } else {
         resultsInfo.innerHTML = `
           <div class="no-search-results">
             <i class="fa-solid fa-magnifying-glass"></i>
             <p>Tidak ada menu yang cocok dengan kata kunci <em>"${query}"</em>.</p>
-            <button type="button" class="btn btn-brown-sm" onclick="resetSearchAndFilter()">Lihat Semua 10 Menu</button>
+            <button type="button" class="btn btn-brown-sm" onclick="resetSearchAndFilter()">Lihat Semua ${cards.length} Menu</button>
           </div>
         `;
       }
     } else if (category !== 'all') {
       const categoryNames = {
-        'makanan': 'Makanan Utama (3 menu)',
-        'pelengkap': 'Lauk & Nasi (3 menu)',
-        'minuman': 'Minuman Segar (4 menu)'
+        'makanan': 'Makanan Utama',
+        'pelengkap': 'Lauk & Nasi',
+        'minuman': 'Minuman Segar'
       };
       resultsInfo.innerHTML = `Menampilkan kategori: <strong>${categoryNames[category] || category}</strong> (${visibleCount} menu)`;
     } else {

@@ -1374,6 +1374,19 @@ button {
   flex-grow: 1;
 }
 
+.image-credit {
+  font-size: 0.62rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.image-credit a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .product-footer {
   display: flex;
   align-items: center;

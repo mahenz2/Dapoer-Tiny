@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dapoer Tiny — Spesialis Ayam Bakar Madu, Gurami, Lele &amp; Minuman Segar</title>
-  <meta name="description" content="Dapoer Tiny: Sajian istimewa Ayam Bakar Madu, Gurami Bakar, Pecel Lele Crispy, Tempe, Tahu, Nasi Putih hangat, serta Minuman Segar Es Jeruk, Es Teh, Es Gula & Air Mineral.">
+  <meta name="description" content="Dapoer Tiny: Ayam Bakar Madu, Gurami Bakar, Pecel Lele, Nasi Goreng, Hati Ayam, pilihan sambal, lauk, dan minuman segar.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23A55704'/><text x='50' y='65' font-size='42' font-family='serif' fill='white' text-anchor='middle'>D</text></svg>">
 
   <!-- Google Fonts: Cormorant Garamond &amp; Plus Jakarta Sans -->
@@ -90,9 +90,9 @@
           RESEP OTENTIK DENGAN BUMBU BAKAR MADU SPESIAL
         </div>
         <div class="quick-category-pills">
-          <a href="#menu" class="cat-pill active" onclick="filterByCategory('all')">SEMUA MENU (10)</a>
-          <a href="#menu" class="cat-pill" onclick="filterByCategory('makanan')">MAKANAN UTAMA (3)</a>
-          <a href="#menu" class="cat-pill" onclick="filterByCategory('pelengkap')">LAUK &amp; NASI (3)</a>
+          <a href="#menu" class="cat-pill active" onclick="filterByCategory('all')">SEMUA MENU (15)</a>
+          <a href="#menu" class="cat-pill" onclick="filterByCategory('makanan')">MAKANAN UTAMA (5)</a>
+          <a href="#menu" class="cat-pill" onclick="filterByCategory('pelengkap')">LAUK &amp; NASI (6)</a>
           <a href="#menu" class="cat-pill" onclick="filterByCategory('minuman')">MINUMAN SEGAR (4)</a>
         </div>
       </div>
@@ -288,16 +288,16 @@
         <div class="search-filter-wrap">
           <div class="menu-search-box">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="menuSearchInput" placeholder="Cari menu: ayam bakar, gurami, lele, tempe, es jeruk, es teh..." class="search-input">
+            <input type="text" id="menuSearchInput" placeholder="Cari menu: ayam bakar, nasi goreng, hati ayam, sambal, minuman..." class="search-input">
             <button type="button" class="clear-search-btn" id="clearSearchBtn" title="Hapus pencarian" aria-label="Hapus pencarian"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
 
         <!-- Filter Category Tabs -->
         <div class="filter-tabs">
-          <button type="button" class="filter-btn active" data-filter="all">Semua Menu <span class="badge-count">10</span></button>
-          <button type="button" class="filter-btn" data-filter="makanan">Makanan Utama <span class="badge-count">3</span></button>
-          <button type="button" class="filter-btn" data-filter="pelengkap">Lauk &amp; Nasi <span class="badge-count">3</span></button>
+          <button type="button" class="filter-btn active" data-filter="all">Semua Menu <span class="badge-count">15</span></button>
+          <button type="button" class="filter-btn" data-filter="makanan">Makanan Utama <span class="badge-count">5</span></button>
+          <button type="button" class="filter-btn" data-filter="pelengkap">Lauk &amp; Nasi <span class="badge-count">6</span></button>
           <button type="button" class="filter-btn" data-filter="minuman">Minuman Segar <span class="badge-count">4</span></button>
         </div>
       </div>
@@ -305,7 +305,7 @@
       <!-- Live Search Status Indicator -->
       <div class="search-results-info" id="searchResultsInfo"></div>
 
-      <!-- Menu Grid: 10 Items -->
+      <!-- Menu Grid: 15 Items -->
       <div class="products-grid" id="menuGrid">
 
         <!-- Menu Item 1: Ayam Bakar Madu -->
@@ -383,7 +383,59 @@
           </div>
         </div>
 
-        <!-- Menu Item 4: Tempe Goreng -->
+        <!-- Menu Item 4: Nasi Goreng Spesial -->
+        <div class="product-card" data-category="makanan" data-name="nasi goreng spesial nasi goreng kecap telur sayur sambal lalapan">
+          <div class="prod-badge">Favorit Warung</div>
+          <div class="prod-img-wrap">
+            <img src="images/nasi_goreng.jpg" alt="Nasi Goreng Spesial dengan sayuran" loading="lazy">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-nasi-goreng', name: 'Nasi Goreng Spesial', price: 20000, category: 'Makanan Utama', desc: 'Nasi goreng berbumbu kecap manis, bawang, dan cabai, disajikan hangat dengan telur serta lalapan segar.', image: 'images/nasi_goreng.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Nasi Goreng Spesial')" title="Simpan ke Favorit" aria-label="Tambah Nasi Goreng Spesial ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">NASI GORENG</span>
+            <h3 class="prod-name">Nasi Goreng Spesial</h3>
+            <p class="prod-meta">Nasi goreng kecap berbumbu bawang dan cabai, disajikan hangat dengan telur dan lalapan.</p>
+            <p class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Nasi_Goreng.jpg" target="_blank" rel="noopener">Foto: Number55 · Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></p>
+            <div class="product-footer">
+              <span class="price-val">Rp 20.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-nasi-goreng', name: 'Nasi Goreng Spesial', price: 20000, image: 'images/nasi_goreng.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 5: Hati Ayam Goreng Lalapan -->
+        <div class="product-card" data-category="makanan" data-name="hati ayam goreng lalapan ati ayam kremes lauk sambal">
+          <div class="prod-badge">Lauk Nusantara</div>
+          <div class="prod-img-wrap">
+            <img src="images/hati_ayam_kremes.jpg" alt="Hati ayam goreng dengan kremes dan lalapan" loading="lazy">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-hati-ayam', name: 'Hati Ayam Goreng Lalapan', price: 15000, category: 'Makanan Utama', desc: 'Hati ayam goreng berbumbu dengan kremes renyah, lalapan segar, dan pilihan sambal Dapoer Tiny.', image: 'images/hati_ayam_kremes.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Hati Ayam Goreng Lalapan')" title="Simpan ke Favorit" aria-label="Tambah Hati Ayam Goreng Lalapan ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">LAUK LALAPAN</span>
+            <h3 class="prod-name">Hati Ayam Goreng Lalapan</h3>
+            <p class="prod-meta">Hati ayam goreng berbumbu dengan kremes renyah, lalapan segar, dan sambal pilihan.</p>
+            <p class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Hati_ayam_kremes.jpg" target="_blank" rel="noopener">Foto: Wiwik P · Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+            <div class="product-footer">
+              <span class="price-val">Rp 15.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-hati-ayam', name: 'Hati Ayam Goreng Lalapan', price: 15000, image: 'images/hati_ayam_kremes.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 6: Tempe Goreng -->
         <div class="product-card" data-category="pelengkap" data-name="tempe goreng gurih renyah kedelai lauk pauk mendoan bacem">
           <div class="prod-badge">Lauk Favorit</div>
           <div class="prod-img-wrap">
@@ -408,7 +460,7 @@
           </div>
         </div>
 
-        <!-- Menu Item 5: Tahu Goreng Crispy -->
+        <!-- Menu Item 7: Tahu Goreng Crispy -->
         <div class="product-card" data-category="pelengkap" data-name="tahu goreng crispy renyah lembut lauk pauk camilan">
           <div class="prod-badge">Renyah Gurih</div>
           <div class="prod-img-wrap">
@@ -433,7 +485,7 @@
           </div>
         </div>
 
-        <!-- Menu Item 6: Nasi Putih Pulen -->
+        <!-- Menu Item 8: Nasi Putih Pulen -->
         <div class="product-card" data-category="pelengkap" data-name="nasi putih pulen hangat beras pandan wangi makanan pokok">
           <div class="prod-img-wrap">
             <img src="images/nasi_putih.jpg" alt="Nasi Putih Pulen">
@@ -457,7 +509,85 @@
           </div>
         </div>
 
-        <!-- Menu Item 7: Es Jeruk Peras -->
+        <!-- Menu Item 9: Extra Sambal Matah -->
+        <div class="product-card" data-category="pelengkap" data-name="extra sambal matah sambel bali cabai bawang serai">
+          <div class="prod-badge">Sambal Bali</div>
+          <div class="prod-img-wrap">
+            <img src="images/sambal_matah.jpg" alt="Sambal matah Bali" loading="lazy">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-sambal-matah', name: 'Extra Sambal Matah', price: 5000, category: 'Lauk & Nasi', desc: 'Sambal matah segar khas Bali dengan irisan cabai, bawang merah, serai, dan jeruk limau.', image: 'images/sambal_matah.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Extra Sambal Matah')" title="Simpan ke Favorit" aria-label="Tambah Extra Sambal Matah ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">TAMBAHAN SAMBAL</span>
+            <h3 class="prod-name">Extra Sambal Matah</h3>
+            <p class="prod-meta">Sambal matah segar khas Bali dengan cabai, bawang merah, serai, dan jeruk limau.</p>
+            <p class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Sambal_matah.jpg" target="_blank" rel="noopener">Foto: ちちゃ · Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/2.1/jp/" target="_blank" rel="noopener">CC BY 2.1 JP</a></p>
+            <div class="product-footer">
+              <span class="price-val">Rp 5.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-sambal-matah', name: 'Extra Sambal Matah', price: 5000, image: 'images/sambal_matah.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 10: Extra Sambal Terasi -->
+        <div class="product-card" data-category="pelengkap" data-name="extra sambal terasi sambel terasi cabai tomat pedas">
+          <div class="prod-badge">Sambal Klasik</div>
+          <div class="prod-img-wrap">
+            <img src="images/sambal_terasi.jpg" alt="Sambal terasi dan kecap" loading="lazy">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-sambal-terasi', name: 'Extra Sambal Terasi', price: 5000, category: 'Lauk & Nasi', desc: 'Sambal terasi gurih pedas dengan cabai dan terasi, cocok sebagai tambahan lauk dan lalapan.', image: 'images/sambal_terasi.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Extra Sambal Terasi')" title="Simpan ke Favorit" aria-label="Tambah Extra Sambal Terasi ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">TAMBAHAN SAMBAL</span>
+            <h3 class="prod-name">Extra Sambal Terasi</h3>
+            <p class="prod-meta">Sambal terasi gurih pedas dengan cabai, pas sebagai tambahan lauk dan lalapan.</p>
+            <p class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Sambal_terasi_and_soysauce.jpg" target="_blank" rel="noopener">Foto: Cun Cun · Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+            <div class="product-footer">
+              <span class="price-val">Rp 5.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-sambal-terasi', name: 'Extra Sambal Terasi', price: 5000, image: 'images/sambal_terasi.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 11: Extra Sambal Merah -->
+        <div class="product-card" data-category="pelengkap" data-name="extra sambal merah sambel merah cabai pedas">
+          <div class="prod-badge">Pedas Merah</div>
+          <div class="prod-img-wrap">
+            <img src="images/sambal_merah.jpg" alt="Sambal merah cabai" loading="lazy">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-sambal-merah', name: 'Extra Sambal Merah', price: 5000, category: 'Lauk & Nasi', desc: 'Sambal merah cabai dengan rasa pedas mantap untuk melengkapi ayam, ikan, atau lalapan.', image: 'images/sambal_merah.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Extra Sambal Merah')" title="Simpan ke Favorit" aria-label="Tambah Extra Sambal Merah ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">TAMBAHAN SAMBAL</span>
+            <h3 class="prod-name">Extra Sambal Merah</h3>
+            <p class="prod-meta">Sambal merah berbahan cabai dengan rasa pedas mantap untuk pelengkap hidangan.</p>
+            <p class="image-credit"><a href="https://commons.wikimedia.org/wiki/File:Sambal_merah.jpg" target="_blank" rel="noopener">Foto: Sabil Khoer Al Munawar · Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
+            <div class="product-footer">
+              <span class="price-val">Rp 5.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-sambal-merah', name: 'Extra Sambal Merah', price: 5000, image: 'images/sambal_merah.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 12: Es Jeruk Peras -->
         <div class="product-card" data-category="minuman" data-name="es jeruk peras asli segar minuman dingin citrus manis alami dahaga">
           <div class="prod-badge">Super Segar</div>
           <div class="prod-img-wrap">
@@ -482,7 +612,7 @@
           </div>
         </div>
 
-        <!-- Menu Item 8: Es Teh Manis -->
+        <!-- Menu Item 13: Es Teh Manis -->
         <div class="product-card" data-category="minuman" data-name="es teh manis segar melati jasmine iced tea minuman dingin">
           <div class="prod-badge">Favorit Santap</div>
           <div class="prod-img-wrap">
@@ -507,7 +637,7 @@
           </div>
         </div>
 
-        <!-- Menu Item 9: Es Gula Asli -->
+        <!-- Menu Item 14: Es Gula Asli -->
         <div class="product-card" data-category="minuman" data-name="es gula asli segar sirup tebu minuman dingin tradisional manis alami">
           <div class="prod-badge">Klasik Segar</div>
           <div class="prod-img-wrap">
@@ -532,7 +662,7 @@
           </div>
         </div>
 
-        <!-- Menu Item 10: Air Mineral -->
+        <!-- Menu Item 15: Air Mineral -->
         <div class="product-card" data-category="minuman" data-name="air mineral dingin botol segar higienis kemasan murni">
           <div class="prod-img-wrap">
             <img src="images/air_mineral.jpg" alt="Air Mineral Dingin">
