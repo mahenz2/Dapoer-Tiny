@@ -7,12 +7,12 @@ const state = {
   cart: [],
   wishlist: new Set(),
   spotlight: {
-    basePrice: 145000,
-    currentPrice: 145000,
+    basePrice: 28000,
+    currentPrice: 28000,
     quantity: 1,
     portion: '1 Porsi Personal',
-    name: 'Slow-Cooked Caramelized Beef',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80'
+    name: 'Ayam Bakar Madu Spesial',
+    image: 'images/ayam_bakar_madu.jpg'
   },
   quickView: {
     currentDish: null,
@@ -156,9 +156,9 @@ function renderCart() {
   const totalItems = state.cart.reduce((sum, item) => sum + item.quantity, 0);
   const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-  // Free shipping threshold: Rp 150.000
-  const freeShippingThreshold = 150000;
-  const standardShipping = 15000;
+  // Free shipping threshold: Rp 80.000
+  const freeShippingThreshold = 80000;
+  const standardShipping = 10000;
   const isFreeShipping = subtotal >= freeShippingThreshold || subtotal === 0;
   const shippingFee = (subtotal === 0 || isFreeShipping) ? 0 : standardShipping;
   const grandTotal = subtotal + shippingFee;
@@ -256,8 +256,8 @@ function processCheckout() {
   }
 
   const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const freeShipping = subtotal >= 150000;
-  const shippingFee = freeShipping ? 0 : 15000;
+  const freeShipping = subtotal >= 80000;
+  const shippingFee = freeShipping ? 0 : 10000;
   const grandTotal = subtotal + shippingFee;
 
   let message = `*HALO DAPOER TINY, SAYA INGIN MEMESAN:*\n\n`;
@@ -377,7 +377,7 @@ function changeQty(delta) {
 
 function addSpotlightToCart() {
   addToCartItem({
-    id: 'spotlight-beef',
+    id: 'spotlight-ayam-bakar',
     name: `${state.spotlight.name}`,
     portion: state.spotlight.portion,
     price: state.spotlight.currentPrice,

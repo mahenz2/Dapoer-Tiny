@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dapoer Tiny — Artisan Culinary &amp; Kitchen</title>
-  <meta name="description" content="Dapoer Tiny: Sajian kuliner otentik, artisan sourdough, dan hidangan daging empuk panggang lambat dengan bahan segar pilihan diolah penuh cinta.">
+  <title>Dapoer Tiny — Spesialis Ayam Bakar Madu, Gurami, Lele &amp; Minuman Segar</title>
+  <meta name="description" content="Dapoer Tiny: Sajian istimewa Ayam Bakar Madu, Gurami Bakar, Pecel Lele Crispy, Tempe, Tahu, Nasi Putih hangat, serta Minuman Segar Es Jeruk, Es Teh, Es Gula & Air Mineral.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23A55704'/><text x='50' y='65' font-size='42' font-family='serif' fill='white' text-anchor='middle'>D</text></svg>">
 
   <!-- Google Fonts: Cormorant Garamond &amp; Plus Jakarta Sans -->
@@ -18,28 +18,6 @@
 </head>
 <body>
 
-  <!-- Top Announcement / Contact Bar -->
-  <header class="top-header">
-    <div class="container top-header-inner">
-      <div class="contact-info">
-        <a href="mailto:order@dapoertiny.com" class="contact-link">
-          <i class="fa-regular fa-envelope"></i> order@dapoertiny.com
-        </a>
-        <span class="divider-dot">•</span>
-        <a href="https://wa.me/628123456789" class="contact-link" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890 (WhatsApp)
-        </a>
-      </div>
-      <div class="top-tagline">
-        <span class="tagline-marquee"><i class="fa-solid fa-wheat-awn"></i> 100% BAHAN ORGANIK PILIHAN • FRESHLY BAKED &amp; SLOW-COOKED SETIAP HARI</span>
-      </div>
-      <div class="top-actions">
-        <span class="pill-badge active">MAIN DISH</span>
-        <span class="pill-badge">ARTISAN BAKERY</span>
-        <span class="pill-badge">DESSERT</span>
-      </div>
-    </div>
-  </header>
 
   <!-- Main Sticky Navigation -->
   <nav class="main-nav" id="mainNavbar">
@@ -53,10 +31,10 @@
       <!-- Desktop Nav Links -->
       <ul class="nav-links">
         <li><a href="#hero" class="nav-link active">Beranda</a></li>
-        <li><a href="#menu" class="nav-link">Koleksi Menu</a></li>
-        <li><a href="#philosophy" class="nav-link">Keunggulan Rasa</a></li>
+        <li><a href="#menu" class="nav-link">Produk</a></li>
+        <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        <li><a href="#philosophy" class="nav-link">Tentang Kami</a></li>
         <li><a href="#spotlight" class="nav-link">Menu Spesial Hari Ini</a></li>
-        <li><a href="#reviews" class="nav-link">Ulasan Pembeli</a></li>
         <li><a href="#catering" class="nav-link">Katering &amp; Event</a></li>
       </ul>
 
@@ -87,10 +65,10 @@
     <div class="mobile-menu-drawer" id="mobileDrawer">
       <ul class="mobile-nav-links">
         <li><a href="#hero" class="mobile-link">Beranda</a></li>
-        <li><a href="#menu" class="mobile-link">Koleksi Menu Lengkap</a></li>
-        <li><a href="#philosophy" class="mobile-link">Keunggulan Rasa &amp; Bahan</a></li>
+        <li><a href="#menu" class="mobile-link">Produk</a></li>
+        <li><a href="#kontak" class="mobile-link">Kontak</a></li>
+        <li><a href="#philosophy" class="mobile-link">Tentang Kami</a></li>
         <li><a href="#spotlight" class="mobile-link">Menu Spesial Chef</a></li>
-        <li><a href="#reviews" class="mobile-link">Ulasan Pelanggan</a></li>
         <li><a href="#catering" class="mobile-link">Katering Acara &amp; Pesta</a></li>
       </ul>
       <div class="mobile-drawer-footer">
@@ -109,18 +87,19 @@
       <div class="hero-top-row reveal-on-scroll">
         <div class="notice-badge">
           <span class="pulse-dot"></span>
-          RESEP OTENTIK RUMAHAN DENGAN SENTUHAN GOURMET MODERN
+          RESEP OTENTIK DENGAN BUMBU BAKAR MADU SPESIAL
         </div>
         <div class="quick-category-pills">
-          <a href="#menu" class="cat-pill active">DISHES</a>
-          <a href="#menu" class="cat-pill">BAKERY</a>
-          <a href="#menu" class="cat-pill">PASTRY</a>
+          <a href="#menu" class="cat-pill active" onclick="filterByCategory('all')">SEMUA MENU</a>
+          <a href="#menu" class="cat-pill" onclick="filterByCategory('makanan')">MAKANAN</a>
+          <a href="#menu" class="cat-pill" onclick="filterByCategory('pelengkap')">LAUK &amp; NASI</a>
+          <a href="#menu" class="cat-pill" onclick="filterByCategory('minuman')">MINUMAN</a>
         </div>
       </div>
 
       <!-- Main Editorial Headline -->
       <div class="hero-main-title reveal-on-scroll">
-        <h1>Artisan Food <i>Kitchen</i></h1>
+        <h1>Ayam Bakar Madu <i>&amp; Masakan Nusantara</i></h1>
       </div>
 
       <!-- Split Layout Grid: Left Feature Card + Right Mini Menu Cards -->
@@ -129,35 +108,35 @@
         <!-- LEFT COLUMN: Main Feature Feast + Brown Accent Card -->
         <div class="hero-left-col reveal-on-scroll">
 
-          <!-- Big Visual Card with Feast Photo &amp; Floating Product Widget -->
+          <!-- Big Visual Card with Feast Photo & Floating Product Widget -->
           <div class="hero-featured-card">
             <!-- Ticker Sub-headers -->
             <div class="card-ticker">
-              <span>RESEP RAHASIA WARISAN</span>
-              <span>BAHAN ORGANIK SEGAR PILIHAN</span>
-              <span>DIBUAT HANGAT SETIAP PESANAN</span>
+              <span>AYAM BAKAR MADU SPESIAL</span>
+              <span>IKAN SEGAR GURAMI &amp; LELE</span>
+              <span>MINUMAN SEGAR DINGIN</span>
             </div>
 
             <!-- Food Visual Container -->
             <div class="model-image-container">
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Dapoer Tiny Gourmet Feast" class="hero-model-img">
+              <img src="images/paket_komplit.jpg" alt="Paket Komplit Ayam Bakar Madu Dapoer Tiny" class="hero-model-img">
               <div class="image-gradient-overlay"></div>
             </div>
 
             <!-- Floating Overlay Dish Card (Bottom Left) -->
             <div class="floating-product-card">
               <div class="floating-bottle-thumb">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=260&amp;q=80" alt="Gourmet Bowl Dapoer Tiny">
+                <img src="images/paket_komplit.jpg" alt="Paket Komplit Ayam Bakar Madu">
               </div>
               <div class="floating-content">
-                <h4>Signature Warm Nourish Bowl</h4>
-                <p>Kombinasi protein panggang rempah pilihan, quinoa organik, alpukat segar &amp; saus wijen sangrai khas Dapoer Tiny.</p>
+                <h4>Paket Komplit Ayam Bakar Madu</h4>
+                <p>Ayam bakar madu empuk meresap, nasi pulen hangat, tahu &amp; tempe goreng renyah, lalapan dan sambal bajak nikmat.</p>
                 <div class="floating-bottom-row">
-                  <span class="product-price">Rp 85.000</span>
-                  <button type="button" class="btn-circle-action" onclick="addToCartItem({id: 'hero-1', name: 'Signature Warm Nourish Bowl', price: 85000, image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=260&amp;q=80'})" title="Tambah ke Pesanan" aria-label="Tambah Signature Warm Nourish Bowl ke keranjang">
+                  <span class="product-price">Rp 38.000</span>
+                  <button type="button" class="btn-circle-action" onclick="addToCartItem({id: 'paket-komplit-hero', name: 'Paket Komplit Ayam Bakar Madu', price: 38000, image: 'images/paket_komplit.jpg'})" title="Tambah ke Pesanan" aria-label="Tambah Paket Komplit Ayam Bakar Madu ke keranjang">
                     <i class="fa-solid fa-plus"></i>
                   </button>
-                  <button type="button" class="explore-pill" onclick="openQuickView({id: 'hero-1', name: 'Signature Warm Nourish Bowl', price: 85000, category: 'Mains', desc: 'Kombinasi protein panggang rempah pilihan, quinoa organik, alpukat segar, brokoli kukus renyah, edamame manis, dan siraman saus wijen sangrai racikan otentik dapur kami.', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+                  <button type="button" class="explore-pill" onclick="openQuickView({id: 'paket-komplit-hero', name: 'Paket Komplit Ayam Bakar Madu', price: 38000, category: 'Makanan Utama', desc: 'Sajian lengkap favorit keluarga: 1 potong ayam bakar madu empuk lezat, seporsi nasi putih pulen hangat, tahu dan tempe goreng renyah, lalapan segar timun &amp; kemangi, serta sambal terasi pedas manis spesial.', image: 'images/paket_komplit.jpg'})">
                     DETAIL MENU <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
@@ -169,23 +148,23 @@
           <div class="skincare-brown-card" id="philosophy">
             <div class="skincare-text">
               <span class="badge-sub">KOMITMEN KUALITAS DAPOER TINY</span>
-              <h2>Cita Rasa Hangat Yang Menghidupkan Suasana Rumah</h2>
-              <p>Di Dapoer Tiny, setiap hidangan dimasak dari hati dengan bahan baku pilihan terbaik tanpa MSG berlebihan, tanpa pewarna buatan, dan tanpa pengawet. Kami menghadirkan aroma dan kehangatan sejati langsung ke meja makan Anda.</p>
+              <h2>Cita Rasa Bakaran Madu yang Menggugah Selera</h2>
+              <p>Di Dapoer Tiny, setiap potong ayam dimarinasi dengan racikan bumbu rempah warisan dan madu murni, dibakar dengan ketelitian tinggi menghasilkan karamelisasi gurih manis yang meresap sempurna hingga ke tulang. Disajikan hangat bersama sambal nikmat dan lalapan segar.</p>
 
               <ul class="benefit-list">
-                <li><i class="fa-solid fa-circle-check"></i> 100% Halal &amp; Bahan Segar Pilihan Petani Lokal</li>
-                <li><i class="fa-solid fa-circle-check"></i> Slow-cooked &amp; Baked Fresh Sesuai Pesanan</li>
-                <li><i class="fa-solid fa-circle-check"></i> Kemasan Food-Grade Ramah Lingkungan &amp; Higienis</li>
-                <li><i class="fa-solid fa-circle-check"></i> Garansi Citarasa Lezat Sampai ke Tangan Anda</li>
+                <li><i class="fa-solid fa-circle-check"></i> 100% Halal &amp; Bahan Pilihan Segar Setiap Hari</li>
+                <li><i class="fa-solid fa-circle-check"></i> Bumbu Bakar Madu Meresap &amp; Dimasak Fresh Sesuai Pesanan</li>
+                <li><i class="fa-solid fa-circle-check"></i> Sambal Pedas Nikmat &amp; Lalapan Segar Higienis</li>
+                <li><i class="fa-solid fa-circle-check"></i> Minuman Segar Dingin Pelepas Dahaga Paling Pas</li>
               </ul>
 
               <a href="#menu" class="btn btn-outline-white">Eksplorasi Katalog Menu</a>
             </div>
             <div class="skincare-photo">
-              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Chef Plating Gourmet Dish">
+              <img src="images/ayam_bakar_madu.jpg" alt="Ayam Bakar Madu Dapoer Tiny">
               <div class="photo-badge">
                 <strong>4.9/5.0</strong>
-                <span>Rating 1.200+ Pelanggan Setia</span>
+                <span>Rating 1.200+ Pelanggan Puas</span>
               </div>
             </div>
           </div>
@@ -202,14 +181,14 @@
             <div class="mini-prod-card highlight-card">
               <div class="badge-tag">Favorit Pelanggan</div>
               <div class="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Slow-Cooked Herb Ribs">
+                <img src="images/ayam_bakar_madu.jpg" alt="Ayam Bakar Madu Spesial">
               </div>
               <div class="mini-prod-info">
-                <span class="brand-tag">SIGNATURE MAINS</span>
-                <span class="prod-price">Rp 145.000</span>
+                <span class="brand-tag">MENU UTAMA</span>
+                <span class="prod-price">Rp 28.000</span>
               </div>
-              <p class="prod-desc">Daging panggang rempah empuk dengan siraman glazuur madu karamel.</p>
-              <button type="button" class="btn btn-brown-sm w-100" onclick="addToCartItem({id: 'mini-1', name: 'Slow-Cooked Herb Ribs', price: 145000, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+              <p class="prod-desc">Ayam empuk gurih manis karamelisasi madu murni &amp; sambal bajak nikmat.</p>
+              <button type="button" class="btn btn-brown-sm w-100" onclick="addToCartItem({id: 'mini-ayam-bakar', name: 'Ayam Bakar Madu Spesial', price: 28000, image: 'images/ayam_bakar_madu.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
               </button>
             </div>
@@ -217,14 +196,14 @@
             <!-- Card 2 -->
             <div class="mini-prod-card">
               <div class="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Creamy Truffle Pasta">
+                <img src="images/gurami_bakar.jpg" alt="Gurami Bakar Bumbu Madu">
               </div>
               <div class="mini-prod-info">
-                <span class="brand-tag">PASTA SPECIALTY</span>
-                <span class="prod-price">Rp 78.000</span>
+                <span class="brand-tag">IKAN BAKAR FRESH</span>
+                <span class="prod-price">Rp 45.000</span>
               </div>
-              <p class="prod-desc">Pasta buatan tangan dengan saus krim truffle harum &amp; keju parmesan asli.</p>
-              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-2', name: 'Creamy Truffle Pasta', price: 78000, image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+              <p class="prod-desc">Ikan gurami segar dibakar kecap madu harum dengan sambal kecap pedas.</p>
+              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-gurami-bakar', name: 'Gurami Bakar Bumbu Madu', price: 45000, image: 'images/gurami_bakar.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
               </button>
             </div>
@@ -232,14 +211,14 @@
             <!-- Card 3 -->
             <div class="mini-prod-card">
               <div class="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Artisan Sourdough Loaf">
+                <img src="images/pecel_lele.jpg" alt="Pecel Lele Goreng Crispy">
               </div>
               <div class="mini-prod-info">
-                <span class="brand-tag">ARTISAN BAKERY</span>
-                <span class="prod-price">Rp 48.000</span>
+                <span class="brand-tag">IKAN GORENG RENYAH</span>
+                <span class="prod-price">Rp 18.000</span>
               </div>
-              <p class="prod-desc">Roti sourdough fermentasi alami 36 jam, renyah di luar, lembut kenyal di dalam.</p>
-              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-3', name: 'Artisan Sourdough Loaf', price: 48000, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+              <p class="prod-desc">Lele segar digoreng garing renyah gurih dengan lalapan &amp; sambal terasi pedas.</p>
+              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-pecel-lele', name: 'Pecel Lele Goreng Crispy', price: 18000, image: 'images/pecel_lele.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
               </button>
             </div>
@@ -247,14 +226,14 @@
             <!-- Card 4 -->
             <div class="mini-prod-card">
               <div class="prod-img-box">
-                <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Cinnamon Butter Pastry">
+                <img src="images/es_jeruk.jpg" alt="Es Jeruk Peras Asli">
               </div>
               <div class="mini-prod-info">
-                <span class="brand-tag">SWEET PASTRY</span>
-                <span class="prod-price">Rp 35.000</span>
+                <span class="brand-tag">MINUMAN SEGAR</span>
+                <span class="prod-price">Rp 8.000</span>
               </div>
-              <p class="prod-desc">Pastry gulung mentega New Zealand dengan aroma kayu manis aromatik.</p>
-              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-4', name: 'Cinnamon Butter Pastry', price: 35000, image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=400&amp;q=80'})">
+              <p class="prod-desc">Jeruk peras murni dingin segar, pelepas dahaga paling pas saat santap.</p>
+              <button type="button" class="btn btn-outline-sm w-100" onclick="addToCartItem({id: 'mini-es-jeruk', name: 'Es Jeruk Peras Asli', price: 8000, image: 'images/es_jeruk.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Tambah Pesanan
               </button>
             </div>
@@ -263,27 +242,27 @@
 
           <!-- Category Accordion Box -->
           <div class="category-accordion-box">
-            <a href="#menu" class="acc-row" onclick="filterByCategory('bakery')">
-              <span class="acc-title">Artisan Sourdough &amp; <i>Bakery</i></span>
+            <a href="#menu" class="acc-row" onclick="filterByCategory('makanan')">
+              <span class="acc-title">Ayam Bakar Madu &amp; <i>Ikan Gurami Bakar</i></span>
               <span class="acc-action"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
-            <a href="#menu" class="acc-row" onclick="filterByCategory('mains')">
-              <span class="acc-title">Slow-Cooked <i>Gourmet Dishes</i></span>
+            <a href="#menu" class="acc-row" onclick="filterByCategory('pelengkap')">
+              <span class="acc-title">Tahu, Tempe <i>&amp; Nasi Pulen Hangat</i></span>
               <span class="acc-action"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
-            <a href="#catering" class="acc-row">
-              <span class="acc-title">Family Feast <i>&amp; Custom Catering</i></span>
+            <a href="#menu" class="acc-row" onclick="filterByCategory('minuman')">
+              <span class="acc-title">Minuman Segar <i>Es Jeruk, Es Teh &amp; Es Gula</i></span>
               <span class="acc-action"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
           </div>
 
-          <!-- Hand &amp; Artisan Kitchen Banner -->
+          <!-- Kitchen Banner -->
           <div class="body-shampoo-banner">
-            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Artisan Hand Kneaded Dough" class="banner-bg-img">
+            <img src="images/ayam_bakar_madu.jpg" alt="Ayam Bakar Madu Fresh" class="banner-bg-img">
             <div class="banner-content">
-              <span class="micro-badge">FRESH FROM OUR OVEN</span>
-              <h3>Artisan <i>Pastry &amp; Loaf</i></h3>
-              <a href="#menu" class="btn btn-white-pill">Pesan Fresh Hari Ini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <span class="micro-badge">SAJIAN FRESH DAPUR</span>
+              <h3>Ayam Bakar Madu <i>Spesial Hari Ini</i></h3>
+              <a href="#menu" class="btn btn-white-pill">Pesan Hangat Sekarang <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
 
@@ -301,15 +280,15 @@
       <!-- Section Header -->
       <div class="section-header reveal-on-scroll">
         <div>
-          <span class="badge-sub">PILIHAN TERBAIK DAPOER TINY</span>
-          <h2 class="section-title">Menu <i>Collection</i></h2>
+          <span class="badge-sub">PILIHAN MENU LENGKAP DAPOER TINY</span>
+          <h2 class="section-title">Daftar Menu <i>Makanan &amp; Minuman</i></h2>
         </div>
 
         <!-- Live Search Bar -->
         <div class="search-filter-wrap">
           <div class="menu-search-box">
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" id="menuSearchInput" placeholder="Cari nama menu, misal: sirloin, croissant, truffle..." class="search-input">
+            <input type="text" id="menuSearchInput" placeholder="Cari menu: ayam bakar, gurami, lele, tempe, es jeruk, es teh..." class="search-input">
             <button type="button" class="clear-search-btn" id="clearSearchBtn" title="Hapus pencarian" aria-label="Hapus pencarian"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
@@ -317,160 +296,260 @@
         <!-- Filter Category Tabs -->
         <div class="filter-tabs">
           <button type="button" class="filter-btn active" data-filter="all">Semua Menu</button>
-          <button type="button" class="filter-btn" data-filter="mains">Main Course</button>
-          <button type="button" class="filter-btn" data-filter="bakery">Bakery &amp; Pastry</button>
-          <button type="button" class="filter-btn" data-filter="dessert">Dessert</button>
+          <button type="button" class="filter-btn" data-filter="makanan">Makanan Utama</button>
+          <button type="button" class="filter-btn" data-filter="pelengkap">Lauk &amp; Nasi</button>
+          <button type="button" class="filter-btn" data-filter="minuman">Minuman Segar</button>
         </div>
       </div>
 
       <!-- Live Search Status Indicator -->
       <div class="search-results-info" id="searchResultsInfo"></div>
 
-      <!-- 6-Product Menu Grid -->
+      <!-- Menu Grid: 10 Items -->
       <div class="products-grid" id="menuGrid">
 
-        <!-- Menu Item 1 -->
-        <div class="product-card" data-category="mains" data-name="herb roasted beef sirloin daging sapi">
+        <!-- Menu Item 1: Ayam Bakar Madu -->
+        <div class="product-card" data-category="makanan" data-name="ayam bakar madu lezat gurih manis empuk sambal bajak lalapan lauk utama">
           <div class="prod-badge">Chef's Special</div>
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Herb Roasted Beef Sirloin">
+            <img src="images/ayam_bakar_madu.jpg" alt="Ayam Bakar Madu Spesial">
             <div class="card-action-overlay">
-              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-1', name: 'Herb Roasted Beef Sirloin', price: 155000, category: 'Main Course', desc: 'Daging sapi sirloin Australia kualitas tinggi dimarinasi 24 jam dengan daun rosemary segar, thyme, dan bumbu kaldu kaldu gurih yang dipanggang secara presisi.', image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-ayam-bakar', name: 'Ayam Bakar Madu Spesial', price: 28000, category: 'Makanan Utama', desc: 'Ayam empuk dimarinasi 12 jam dengan bumbu rempah pilihan dan madu murni, dipanggang dengan karamelisasi gurih manis harum. Dilengkapi sambal bajak nikmat dan lalapan segar.', image: 'images/ayam_bakar_madu.jpg'})" title="Lihat Cepat">
                 <i class="fa-regular fa-eye"></i> Lihat Cepat
               </button>
             </div>
-            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Herb Roasted Beef Sirloin')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Herb Roasted Beef Sirloin dari favorit"><i class="fa-regular fa-heart"></i></button>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Ayam Bakar Madu Spesial')" title="Simpan ke Favorit" aria-label="Tambah Ayam Bakar Madu Spesial ke favorit"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div class="product-body">
-            <span class="prod-subtitle">GOURMET MEAT</span>
-            <h3 class="prod-name">Herb Roasted Beef Sirloin</h3>
-            <p class="prod-meta">Daging sirloin pilihan dimasak lambat 12 jam dengan rosemary dan bumbu kaldu gurih.</p>
+            <span class="prod-subtitle">AYAM BAKAR SPESIAL</span>
+            <h3 class="prod-name">Ayam Bakar Madu Spesial</h3>
+            <p class="prod-meta">Ayam empuk dimarinasi madu murni &amp; bumbu rempah panggang, disajikan dengan sambal bajak &amp; lalapan.</p>
             <div class="product-footer">
-              <span class="price-val">Rp 155.000</span>
-              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-1', name: 'Herb Roasted Beef Sirloin', price: 155000, image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+              <span class="price-val">Rp 28.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-ayam-bakar', name: 'Ayam Bakar Madu Spesial', price: 28000, image: 'images/ayam_bakar_madu.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Pesan
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Menu Item 2 -->
-        <div class="product-card" data-category="mains" data-name="rosemary garlic roast chicken ayam panggang">
+        <!-- Menu Item 2: Gurami Bakar -->
+        <div class="product-card" data-category="makanan" data-name="gurami bakar bumbu madu kecap ikan segar sambal kecap cabe rawit">
+          <div class="prod-badge">Favorit Keluarga</div>
+          <div class="prod-img-wrap">
+            <img src="images/gurami_bakar.jpg" alt="Gurami Bakar Bumbu Madu">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-gurami-bakar', name: 'Gurami Bakar Bumbu Madu', price: 45000, category: 'Makanan Utama', desc: 'Ikan gurami segar pilihan dibakar matang merata dengan olesan kecap manis madu dan rempah nusantara. Daging gurami lembut dan manis alami, disajikan dengan sambal kecap cabe rawit dan irisan tomat timun segar.', image: 'images/gurami_bakar.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Gurami Bakar Bumbu Madu')" title="Simpan ke Favorit" aria-label="Tambah Gurami Bakar Bumbu Madu ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">IKAN BAKAR FRESH</span>
+            <h3 class="prod-name">Gurami Bakar Bumbu Madu</h3>
+            <p class="prod-meta">Ikan gurami segar dibakar dengan olesan kecap madu harum, disajikan dengan sambal kecap pedas.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 45.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-gurami-bakar', name: 'Gurami Bakar Bumbu Madu', price: 45000, image: 'images/gurami_bakar.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 3: Pecel Lele -->
+        <div class="product-card" data-category="makanan" data-name="pecel lele goreng crispy renyah ikan sambal terasi lalapan lamongan">
           <div class="prod-badge">Best Seller</div>
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Rosemary Garlic Roast Chicken">
+            <img src="images/pecel_lele.jpg" alt="Pecel Lele Goreng Crispy">
             <div class="card-action-overlay">
-              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-2', name: 'Rosemary Garlic Roast Chicken', price: 120000, category: 'Main Course', desc: 'Ayam utuh pilihan dimarinasi dengan bawang putih sangrai, garam laut, butter perancis, dan rosemary segar. Daging juicy luar biasa lembut.', image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-pecel-lele', name: 'Pecel Lele Goreng Crispy', price: 18000, category: 'Makanan Utama', desc: 'Ikan lele segar dimarinasi rempah tradisional lalu digoreng garing renyah hingga ke siripnya. Tekstur daging gurih lembut dengan sambal tomat terasi khas Dapoer Tiny dan lalapan kemangi segar.', image: 'images/pecel_lele.jpg'})" title="Lihat Cepat">
                 <i class="fa-regular fa-eye"></i> Lihat Cepat
               </button>
             </div>
-            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Rosemary Garlic Roast Chicken')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Rosemary Garlic Roast Chicken dari favorit"><i class="fa-regular fa-heart"></i></button>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Pecel Lele Goreng Crispy')" title="Simpan ke Favorit" aria-label="Tambah Pecel Lele Goreng Crispy ke favorit"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div class="product-body">
-            <span class="prod-subtitle">SIGNATURE POULTRY</span>
-            <h3 class="prod-name">Rosemary Garlic Roast Chicken</h3>
-            <p class="prod-meta">Ayam panggang utuh bumbu bawang putih panggang, kulit keemasan renyah dan daging sangat juicy.</p>
+            <span class="prod-subtitle">IKAN GORENG RENYAH</span>
+            <h3 class="prod-name">Pecel Lele Goreng Crispy</h3>
+            <p class="prod-meta">Ikan lele segar digoreng renyah garing gurih, sambal terasi khas Dapoer Tiny &amp; lalapan segar.</p>
             <div class="product-footer">
-              <span class="price-val">Rp 120.000</span>
-              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-2', name: 'Rosemary Garlic Roast Chicken', price: 120000, image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+              <span class="price-val">Rp 18.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-pecel-lele', name: 'Pecel Lele Goreng Crispy', price: 18000, image: 'images/pecel_lele.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Pesan
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Menu Item 3 -->
-        <div class="product-card" data-category="mains" data-name="mushroom truffle fettuccine pasta creamy">
+        <!-- Menu Item 4: Tempe Goreng -->
+        <div class="product-card" data-category="pelengkap" data-name="tempe goreng gurih renyah kedelai lauk pauk mendoan bacem">
+          <div class="prod-badge">Lauk Favorit</div>
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Creamy Mushroom Truffle Pasta">
+            <img src="images/tempe_goreng.jpg" alt="Tempe Goreng Gurih">
             <div class="card-action-overlay">
-              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-3', name: 'Mushroom Truffle Fettuccine', price: 82000, category: 'Pasta Artisan', desc: 'Pasta fettuccine buatan tangan dengan saus krim lembut, potongan jamur portobello gurih, minyak truffle putih aromatik, dan limpahan parmesan.', image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-tempe-goreng', name: 'Tempe Goreng Gurih', price: 6000, category: 'Lauk & Nasi', desc: 'Tempe kedelai fermentasi alami berkualitas dipotong tebal dan dimarinasi bawang putih ketumbar sangrai, digoreng hangat dengan keemasan renyah di luar dan lembut di dalam.', image: 'images/tempe_goreng.jpg'})" title="Lihat Cepat">
                 <i class="fa-regular fa-eye"></i> Lihat Cepat
               </button>
             </div>
-            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Mushroom Truffle Fettuccine')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Mushroom Truffle Fettuccine dari favorit"><i class="fa-regular fa-heart"></i></button>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Tempe Goreng Gurih')" title="Simpan ke Favorit" aria-label="Tambah Tempe Goreng Gurih ke favorit"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div class="product-body">
-            <span class="prod-subtitle">PASTA ARTISAN</span>
-            <h3 class="prod-name">Mushroom Truffle Fettuccine</h3>
-            <p class="prod-meta">Fettuccine fresh dengan jamur champignon, sentuhan minyak truffle putih dan parutan Grana Padano.</p>
+            <span class="prod-subtitle">LAUK TRADISIONAL</span>
+            <h3 class="prod-name">Tempe Goreng Gurih</h3>
+            <p class="prod-meta">Tempe kedelai pilihan berbalut bumbu ketumbar dan bawang putih gurih digoreng keemasan.</p>
             <div class="product-footer">
-              <span class="price-val">Rp 82.000</span>
-              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-3', name: 'Mushroom Truffle Fettuccine', price: 82000, image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+              <span class="price-val">Rp 6.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-tempe-goreng', name: 'Tempe Goreng Gurih', price: 6000, image: 'images/tempe_goreng.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Pesan
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Menu Item 4 -->
-        <div class="product-card" data-category="bakery" data-name="country sourdough boule roti gandum ragi">
-          <div class="prod-badge discount">Diskon 10%</div>
+        <!-- Menu Item 5: Tahu Goreng Crispy -->
+        <div class="product-card" data-category="pelengkap" data-name="tahu goreng crispy renyah lembut lauk pauk camilan">
+          <div class="prod-badge">Renyah Gurih</div>
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Country Sourdough Bread">
+            <img src="images/tahu_goreng.jpg" alt="Tahu Goreng Crispy">
             <div class="card-action-overlay">
-              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-4', name: 'Country Sourdough Boule', price: 49500, category: 'Bakery', desc: 'Roti sourdough fermentasi lambat 36 jam menggunakan ragi liar alami. Tanpa bahan kimia, tanpa pengawet. Tekstur luar renyah berkarakter.', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-tahu-goreng', name: 'Tahu Goreng Crispy', price: 6000, category: 'Lauk & Nasi', desc: 'Tahu sutra segar bertekstur luar garing renyah dengan bagian dalam yang lembut gurih lumer di mulut. Sangat nikmat dicocol sambal atau cabai rawit.', image: 'images/tahu_goreng.jpg'})" title="Lihat Cepat">
                 <i class="fa-regular fa-eye"></i> Lihat Cepat
               </button>
             </div>
-            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Country Sourdough Boule')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Country Sourdough Boule dari favorit"><i class="fa-regular fa-heart"></i></button>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Tahu Goreng Crispy')" title="Simpan ke Favorit" aria-label="Tambah Tahu Goreng Crispy ke favorit"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div class="product-body">
-            <span class="prod-subtitle">FERMENTED BAKERY</span>
-            <h3 class="prod-name">Country Sourdough Boule</h3>
-            <p class="prod-meta">Roti gandum ragi alami tanpa pengembang kimiawi, ramah pencernaan dan wangi khas.</p>
+            <span class="prod-subtitle">LAUK TRADISIONAL</span>
+            <h3 class="prod-name">Tahu Goreng Crispy</h3>
+            <p class="prod-meta">Tahu sutra lembut dengan lapisan luar renyah garing gurih, pelengkap sempurna hidangan santap.</p>
             <div class="product-footer">
-              <span class="price-val"><del>Rp 55.000</del> Rp 49.500</span>
-              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-4', name: 'Country Sourdough Boule', price: 49500, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+              <span class="price-val">Rp 6.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-tahu-goreng', name: 'Tahu Goreng Crispy', price: 6000, image: 'images/tahu_goreng.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Pesan
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Menu Item 5 -->
-        <div class="product-card" data-category="bakery" data-name="butter croissant box isi 4 pastry french">
+        <!-- Menu Item 6: Nasi Putih Pulen -->
+        <div class="product-card" data-category="pelengkap" data-name="nasi putih pulen hangat beras pandan wangi makanan pokok">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Butter Flaky Croissant Box">
+            <img src="images/nasi_putih.jpg" alt="Nasi Putih Pulen">
             <div class="card-action-overlay">
-              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-5', name: 'Butter Croissant Box (Isi 4)', price: 68000, category: 'French Pastry', desc: 'Satu box berisi 4 buah croissant dengan lapisan butter Prancis harum yang melepuh sempurna saat digigit. Teman terbaik secangkir kopi pagi.', image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-nasi-putih', name: 'Nasi Putih Pulen', price: 6000, category: 'Lauk & Nasi', desc: 'Nasi putih hangat dari beras pilihan bermutu tinggi, ditanak pulen wangi dan selalu disajikan mengepul hangat untuk menyempurnakan santap lauk pauk.', image: 'images/nasi_putih.jpg'})" title="Lihat Cepat">
                 <i class="fa-regular fa-eye"></i> Lihat Cepat
               </button>
             </div>
-            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Butter Croissant Box (Isi 4)')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Butter Croissant Box (Isi 4) dari favorit"><i class="fa-regular fa-heart"></i></button>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Nasi Putih Pulen')" title="Simpan ke Favorit" aria-label="Tambah Nasi Putih Pulen ke favorit"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div class="product-body">
-            <span class="prod-subtitle">FRENCH PASTRY</span>
-            <h3 class="prod-name">Butter Croissant Box (Isi 4)</h3>
-            <p class="prod-meta">Croissant berlapis renyah dengan aroma butter Prancis autentik, dipanggang hangat tiap pagi.</p>
+            <span class="prod-subtitle">NASI HANGAT</span>
+            <h3 class="prod-name">Nasi Putih Pulen</h3>
+            <p class="prod-meta">Nasi putih hangat pulen dari beras pilihan bermutu tinggi, wangi dan lezat.</p>
             <div class="product-footer">
-              <span class="price-val">Rp 68.000</span>
-              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-5', name: 'Butter Croissant Box (Isi 4)', price: 68000, image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+              <span class="price-val">Rp 6.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-nasi-putih', name: 'Nasi Putih Pulen', price: 6000, image: 'images/nasi_putih.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Pesan
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Menu Item 6 -->
-        <div class="product-card" data-category="dessert" data-name="classic mascarpone tiramisu dessert manis cake">
-          <div class="prod-badge">Signature Dessert</div>
+        <!-- Menu Item 7: Es Jeruk Peras -->
+        <div class="product-card" data-category="minuman" data-name="es jeruk peras asli segar minuman dingin citrus manis alami dahaga">
+          <div class="prod-badge">Super Segar</div>
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Classic Tiramisu Melts">
+            <img src="images/es_jeruk.jpg" alt="Es Jeruk Peras Asli">
             <div class="card-action-overlay">
-              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-6', name: 'Classic Mascarpone Tiramisu', price: 58000, category: 'Dessert', desc: 'Dessert klasik Italia autentik: biskuit Savoiardi diseduh kopi espresso pekat, dilapisi krim keju mascarpone halus dan bubuk kakao murni tanpa pemanis berlebih.', image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})" title="Lihat Cepat">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-es-jeruk', name: 'Es Jeruk Peras Asli', price: 8000, category: 'Minuman Segar', desc: 'Perasan jeruk segar asli pilihan dengan bulir jeruk melimpah, es batu dingin, dan gula tebu murni. Paduan rasa manis asam alami yang seketika menghilangkan dahaga.', image: 'images/es_jeruk.jpg'})" title="Lihat Cepat">
                 <i class="fa-regular fa-eye"></i> Lihat Cepat
               </button>
             </div>
-            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Classic Mascarpone Tiramisu')" title="Simpan ke Favorit" aria-label="Tambah atau hapus Classic Mascarpone Tiramisu dari favorit"><i class="fa-regular fa-heart"></i></button>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Es Jeruk Peras Asli')" title="Simpan ke Favorit" aria-label="Tambah Es Jeruk Peras Asli ke favorit"><i class="fa-regular fa-heart"></i></button>
           </div>
           <div class="product-body">
-            <span class="prod-subtitle">ITALIAN SWEETS</span>
-            <h3 class="prod-name">Classic Mascarpone Tiramisu</h3>
-            <p class="prod-meta">Ladyfingers rendaman espresso aromatik, krim mascarpone lembut dan taburan cocoa murni.</p>
+            <span class="prod-subtitle">MINUMAN DINGIN</span>
+            <h3 class="prod-name">Es Jeruk Peras Asli</h3>
+            <p class="prod-meta">Perasan jeruk segar asli dengan gula tebu dan es batu dingin pelepas dahaga alami.</p>
             <div class="product-footer">
-              <span class="price-val">Rp 58.000</span>
-              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-6', name: 'Classic Mascarpone Tiramisu', price: 58000, image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=80'})">
+              <span class="price-val">Rp 8.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-es-jeruk', name: 'Es Jeruk Peras Asli', price: 8000, image: 'images/es_jeruk.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 8: Es Teh Manis -->
+        <div class="product-card" data-category="minuman" data-name="es teh manis segar melati jasmine iced tea minuman dingin">
+          <div class="prod-badge">Favorit Santap</div>
+          <div class="prod-img-wrap">
+            <img src="images/es_teh.jpg" alt="Es Teh Manis Segar">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-es-teh', name: 'Es Teh Manis Segar', price: 5000, category: 'Minuman Segar', desc: 'Seduhan daun teh melati pilihan nusantara yang harum semerbak, dengan racikan manis yang pas dan es batu dingin menyegarkan di setiap tegukan.', image: 'images/es_teh.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Es Teh Manis Segar')" title="Simpan ke Favorit" aria-label="Tambah Es Teh Manis Segar ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">MINUMAN DINGIN</span>
+            <h3 class="prod-name">Es Teh Manis Segar</h3>
+            <p class="prod-meta">Teh melati wangi pilihan dengan rasa manis pas dan kesegaran es dingin menyegarkan.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 5.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-es-teh', name: 'Es Teh Manis Segar', price: 5000, image: 'images/es_teh.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 9: Es Gula Asli -->
+        <div class="product-card" data-category="minuman" data-name="es gula asli segar sirup tebu minuman dingin tradisional manis alami">
+          <div class="prod-badge">Klasik Segar</div>
+          <div class="prod-img-wrap">
+            <img src="images/es_gula.jpg" alt="Es Gula Asli Segar">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-es-gula', name: 'Es Gula Asli Segar', price: 6000, category: 'Minuman Segar', desc: 'Minuman es gula asli tradisional disajikan dingin dengan es batu, perasan jeruk nipis segar dan daun mint wangi. Manisnya lembut, murni, dan tidak serak di tenggorokan.', image: 'images/es_gula.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Es Gula Asli Segar')" title="Simpan ke Favorit" aria-label="Tambah Es Gula Asli Segar ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">MINUMAN DINGIN</span>
+            <h3 class="prod-name">Es Gula Asli Segar</h3>
+            <p class="prod-meta">Es sirup gula tebu murni dengan aroma wangi &amp; jeruk nipis menyegarkan dahaga.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 6.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-es-gula', name: 'Es Gula Asli Segar', price: 6000, image: 'images/es_gula.jpg'})">
+                <i class="fa-solid fa-cart-plus"></i> + Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 10: Air Mineral -->
+        <div class="product-card" data-category="minuman" data-name="air mineral dingin botol segar higienis kemasan murni">
+          <div class="prod-img-wrap">
+            <img src="images/air_mineral.jpg" alt="Air Mineral Dingin">
+            <div class="card-action-overlay">
+              <button type="button" class="quick-view-btn" onclick="openQuickView({id: 'menu-air-mineral', name: 'Air Mineral Dingin', price: 4000, category: 'Minuman Segar', desc: 'Air mineral murni pegunungan kemasan botol higienis yang disaring alami dengan mineral seimbang, disajikan dingin atau suhu ruang sesuai selera Anda.', image: 'images/air_mineral.jpg'})" title="Lihat Cepat">
+                <i class="fa-regular fa-eye"></i> Lihat Cepat
+              </button>
+            </div>
+            <button type="button" class="wishlist-btn" onclick="toggleWishlist(this, 'Air Mineral Dingin')" title="Simpan ke Favorit" aria-label="Tambah Air Mineral Dingin ke favorit"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="product-body">
+            <span class="prod-subtitle">AIR MINERAL</span>
+            <h3 class="prod-name">Air Mineral Dingin</h3>
+            <p class="prod-meta">Air mineral pegunungan murni higienis kemasan botol, siap disajikan dingin atau normal.</p>
+            <div class="product-footer">
+              <span class="price-val">Rp 4.000</span>
+              <button type="button" class="btn btn-brown-sm" onclick="addToCartItem({id: 'menu-air-mineral', name: 'Air Mineral Dingin', price: 4000, image: 'images/air_mineral.jpg'})">
                 <i class="fa-solid fa-cart-plus"></i> + Pesan
               </button>
             </div>
@@ -490,18 +569,18 @@
         <!-- Left: Dish Visual Showcase Gallery -->
         <div class="spotlight-gallery">
           <div class="spotlight-main-img">
-            <img id="mainProductImg" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Slow-Cooked Caramelized Beef">
-            <div class="zoom-badge"><i class="fa-solid fa-fire"></i> Fresh From Oven</div>
+            <img id="mainProductImg" src="images/ayam_bakar_madu.jpg" alt="Ayam Bakar Madu Spesial Dapoer Tiny">
+            <div class="zoom-badge"><i class="fa-solid fa-fire"></i> Fresh Dari Panggangan</div>
           </div>
           <div class="thumbnail-row">
-            <button type="button" class="thumb-btn active" onclick="switchImage(this, 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
-              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Porsi Reguler">
+            <button type="button" class="thumb-btn active" onclick="switchImage(this, 'images/ayam_bakar_madu.jpg')">
+              <img src="images/ayam_bakar_madu.jpg" alt="Ayam Bakar Madu Spesial">
             </button>
-            <button type="button" class="thumb-btn" onclick="switchImage(this, 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Paket Feast">
+            <button type="button" class="thumb-btn" onclick="switchImage(this, 'images/paket_komplit.jpg')">
+              <img src="images/paket_komplit.jpg" alt="Paket Komplit Ayam Bakar">
             </button>
-            <button type="button" class="thumb-btn" onclick="switchImage(this, 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
-              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="Plating Sajian">
+            <button type="button" class="thumb-btn" onclick="switchImage(this, 'images/gurami_bakar.jpg')">
+              <img src="images/gurami_bakar.jpg" alt="Gurami Bakar Bumbu Madu">
             </button>
           </div>
         </div>
@@ -517,30 +596,30 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <span class="rating-text"><strong>5.0</strong> (320+ Ulasan Puas Pelanggan)</span>
+            <span class="rating-text"><strong>5.0</strong> (480+ Ulasan Puas Pelanggan)</span>
             <span class="stock-badge"><i class="fa-solid fa-check"></i> Siap Dimasak &amp; Dikirim Hangat</span>
           </div>
 
-          <h2 class="spotlight-title">Dapoer Tiny — <i>Slow-Cooked Caramelized Beef</i></h2>
-          <p class="spotlight-tagline">Tender Australian Beef with House-made Caramelized Herb Glaze</p>
+          <h2 class="spotlight-title">Dapoer Tiny — <i>Ayam Bakar Madu Spesial</i></h2>
+          <p class="spotlight-tagline">Ayam Bakar Karamel Madu Murni Gurih Meresap dengan Sambal Bajak Khas</p>
 
           <div class="spotlight-price-box">
-            <span class="current-price" id="spotlightPrice">Rp 145.000</span>
-            <span class="tax-note">Termasuk Kondimen Sambal &amp; Sayuran Panggang</span>
+            <span class="current-price" id="spotlightPrice">Rp 28.000</span>
+            <span class="tax-note">Termasuk Sambal Pedas Nikmat &amp; Lalapan Segar</span>
           </div>
 
           <p class="spotlight-desc">
-            Sajian primadona Dapoer Tiny menggunakan daging sapi sirloin berkualitas tinggi yang dimarinasi selama 24 jam dengan rempah dapur pilihan, lalu dipanggang lambat hingga teksturnya sangat empuk dan meresap sempurna sampai ke serat terdalam.
+            Sajian primadona Dapoer Tiny menggunakan daging ayam segar pilihan yang dimarinasi 12 jam dengan bumbu rempah warisan dan madu hutan murni. Dibakar perlahan hingga bumbu terkaramelisasi harum, tekstur daging sangat empuk dan bumbu gurih manisnya meresap sampai ke serat terdalam.
           </p>
 
           <!-- Portion / Size Selector -->
           <div class="selector-group">
             <label class="selector-label">Pilih Paket Porsi:</label>
             <div class="size-options">
-              <button type="button" class="size-btn active" data-portion="1 Porsi Personal" data-price="145000" onclick="selectSize(this, 145000, '1 Porsi Personal')">1 Porsi Personal</button>
-              <button type="button" class="size-btn" data-portion="Paket Duo (2 Porsi)" data-price="275000" onclick="selectSize(this, 275000, 'Paket Duo (2 Porsi)')">Paket Duo (2 Porsi)</button>
-              <button type="button" class="size-btn" data-portion="Family Pack (4 Porsi)" data-price="490000" onclick="selectSize(this, 490000, 'Family Pack (4 Porsi)')">Family Pack (4 Porsi)</button>
-              <button type="button" class="size-btn" data-portion="Party Platter (8 Porsi)" data-price="950000" onclick="selectSize(this, 950000, 'Party Platter (8 Porsi)')">Party Platter (8 Porsi)</button>
+              <button type="button" class="size-btn active" data-portion="1 Porsi Personal" data-price="28000" onclick="selectSize(this, 28000, '1 Porsi Personal')">1 Porsi Personal (Rp 28rb)</button>
+              <button type="button" class="size-btn" data-portion="Paket Komplit (Nasi+Lauk+Es Teh)" data-price="38000" onclick="selectSize(this, 38000, 'Paket Komplit (Nasi+Lauk+Es Teh)')">Paket Komplit (Rp 38rb)</button>
+              <button type="button" class="size-btn" data-portion="Paket Duo (2 Porsi Komplit)" data-price="72000" onclick="selectSize(this, 72000, 'Paket Duo (2 Porsi Komplit)')">Paket Duo (Rp 72rb)</button>
+              <button type="button" class="size-btn" data-portion="Paket Keluarga (1 Ekor + 4 Nasi)" data-price="125000" onclick="selectSize(this, 125000, 'Paket Keluarga (1 Ekor + 4 Nasi)')">Paket Keluarga (Rp 125rb)</button>
             </div>
           </div>
 
@@ -562,14 +641,14 @@
             <div class="trust-item">
               <i class="fa-solid fa-motorcycle"></i>
               <div>
-                <strong>Pengiriman Cepat</strong>
+                <strong>Pengiriman Hangat</strong>
                 <span>Instant &amp; Sameday delivery</span>
               </div>
             </div>
             <div class="trust-item">
               <i class="fa-solid fa-utensils"></i>
               <div>
-                <strong>Higienis Terjamin</strong>
+                <strong>100% Halal &amp; Higienis</strong>
                 <span>Dapur bersih standar tinggi</span>
               </div>
             </div>
@@ -595,7 +674,7 @@
       <div class="section-center-header reveal-on-scroll">
         <span class="badge-sub">KATA MEREKA TENTANG DAPOER TINY</span>
         <h2 class="section-title">Cerita &amp; Ulasan <i>Pelanggan</i></h2>
-        <p class="section-lead">Lebih dari seribu keluarga dan penikmat kuliner mempercayakan momen santap hangat mereka bersama Dapoer Tiny.</p>
+        <p class="section-lead">Lebih dari seribu keluarga dan penikmat kuliner mempercayakan momen santap nikmat mereka bersama Dapoer Tiny.</p>
       </div>
 
       <div class="reviews-grid reveal-on-scroll">
@@ -605,7 +684,7 @@
           <div class="review-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="review-text">"Slow-cooked beef-nya benar-benar juara! Dagingnya lumer di mulut dan bumbu glazuurnya manis gurih pas sekali. Keluarga sampai minta pesan lagi untuk makan malam akhir pekan."</p>
+          <p class="review-text">"Ayam bakar madunya benar-benar juara! Bumbunya manis gurih karamel meresap sampai ke tulang, dagingnya empuk banget. Sambal bajak dan lalapannya segar melengkapi santap siang."</p>
           <div class="reviewer-info">
             <div class="reviewer-avatar">
               <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="Sarah Amanda">
@@ -622,7 +701,7 @@
           <div class="review-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="review-text">"Sourdough-nya punya crust yang renyah dan crumb yang chewy sempurna! Sangat bersahabat di lambung karena fermentasi alami. Pengirimannya juga rapi dan masih hangat saat tiba."</p>
+          <p class="review-text">"Gurami bakar dan pecel lelenya sangat recommended! Ikannya fresh tanpa bau tanah, bumbu bakarnya sedap, plus es jeruk perasnya segar banget diminum siang hari. Pasti langganan terus!"</p>
           <div class="reviewer-info">
             <div class="reviewer-avatar">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="Dimas Pratama">
@@ -639,7 +718,7 @@
           <div class="review-stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
           </div>
-          <p class="review-text">"Pesan paket katering untuk syukuran kantor 35 pax, semua kolega memuji citarasa makanannya. Pelayanannya sangat ramah dan presentasi packaging-nya estetik premium!"</p>
+          <p class="review-text">"Pesan paket nasi box ayam bakar madu komplit untuk syukuran keluarga 40 porsi. Tahu dan tempenya gurih garing, es teh dan es gulanya mantap, semua tamu memuji kelezatannya!"</p>
           <div class="reviewer-info">
             <div class="reviewer-avatar">
               <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=120&amp;q=80" alt="Nathalia Kusuma">
@@ -660,9 +739,9 @@
   <section class="newsletter-section" id="catering">
     <div class="container newsletter-box reveal-on-scroll">
       <div class="newsletter-content">
-        <span class="badge-sub-light">PAKET KATERING &amp; SPECIAL OCCASIONS</span>
-        <h2>Rencanakan Acara &amp; Santap Bersama Dapoer Tiny</h2>
-        <p>Butuh menu tumpeng mini gourmet, hantaran box eksklusif, atau katering pesta keluarga? Konsultasikan menu khusus Anda langsung bersama tim dapur kami.</p>
+        <span class="badge-sub-light">PAKET NASI BOX &amp; KATERING ACARA</span>
+        <h2>Rencanakan Syukuran &amp; Santap Bersama Dapoer Tiny</h2>
+        <p>Butuh paket nasi box ayam bakar madu, tumpeng mini, atau katering pesta dan syukuran keluarga? Konsultasikan menu khusus Anda langsung bersama tim dapur kami.</p>
 
         <form class="newsletter-form" id="cateringForm">
           <input type="text" id="cateringContactInput" placeholder="Masukkan nomor WhatsApp atau Email Anda..." required class="newsletter-input">
@@ -681,7 +760,7 @@
           <span class="logo-mark">●</span> DAPOER <i>Tiny</i>
         </a>
         <p class="brand-bio">
-          Dapur artisan dengan dedikasi menyajikan makanan lezat bermutu tinggi, roti fresh, dan menu hidangan keluarga yang dibuat fresh setiap hari.
+          Dapur kuliner nusantara dengan sajian Ayam Bakar Madu spesial, Gurami Bakar, Pecel Lele Crispy, lauk tahu tempe gurih, dan aneka minuman segar yang dibuat fresh setiap hari.
         </p>
         <div class="social-links">
           <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -694,43 +773,43 @@
       <div class="footer-col">
         <h4>Koleksi Menu</h4>
         <ul>
-          <li><a href="#menu">Main Course Daging &amp; Unggas</a></li>
-          <li><a href="#menu">Artisan Sourdough &amp; Pastry</a></li>
-          <li><a href="#menu">Gourmet Pasta &amp; Noodle</a></li>
-          <li><a href="#menu">Family Feast Box</a></li>
-          <li><a href="#menu">Dessert &amp; Puding Lembut</a></li>
+          <li><a href="#menu" onclick="filterByCategory('makanan')">Ayam Bakar Madu Spesial</a></li>
+          <li><a href="#menu" onclick="filterByCategory('makanan')">Gurami Bakar Bumbu Madu</a></li>
+          <li><a href="#menu" onclick="filterByCategory('makanan')">Pecel Lele Goreng Crispy</a></li>
+          <li><a href="#menu" onclick="filterByCategory('pelengkap')">Tahu &amp; Tempe Goreng Gurih</a></li>
+          <li><a href="#menu" onclick="filterByCategory('minuman')">Es Jeruk, Es Teh &amp; Es Gula</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Layanan Dapur</h4>
         <ul>
-          <li><a href="#philosophy">Filosofi &amp; Bahan Kami</a></li>
-          <li><a href="#catering">Katering Kantor &amp; Rumah</a></li>
-          <li><a href="#catering">Hantaran &amp; Hampers Hari Raya</a></li>
-          <li><a href="#catering">Custom Menu Diet &amp; Alergi</a></li>
-          <li><a href="#catering">Area Jangkauan Pengiriman</a></li>
+          <li><a href="#philosophy">Filosofi Bumbu &amp; Bahan</a></li>
+          <li><a href="#catering">Pesanan Nasi Box Kantor &amp; Rumah</a></li>
+          <li><a href="#catering">Paket Syukuran &amp; Tumpeng Mini</a></li>
+          <li><a href="#spotlight">Paket Hemat Keluarga</a></li>
+          <li><a href="#catering">Area Pengiriman Hangat</a></li>
         </ul>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" id="kontak">
         <h4>Kontak &amp; Pemesanan</h4>
         <ul>
           <li><a href="https://wa.me/628123456789"><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890</a></li>
           <li><a href="mailto:order@dapoertiny.com"><i class="fa-regular fa-envelope"></i> order@dapoertiny.com</a></li>
-          <li><span><i class="fa-regular fa-clock"></i> 08:00 - 20:00 WIB</span></li>
-          <li><span><i class="fa-solid fa-location-dot"></i> Jabodetabek (Instant Courier)</span></li>
+          <li><span><i class="fa-regular fa-clock"></i> 09:00 - 21:00 WIB</span></li>
+          <li><span><i class="fa-solid fa-location-dot"></i> Pengiriman Cepat (Instant Courier)</span></li>
         </ul>
       </div>
 
     </div>
 
     <div class="container footer-bottom">
-      <p>&copy; 2026 Dapoer Tiny Culinary &amp; Kitchen. Hak Cipta Dilindungi Undang-Undang.</p>
+      <p>&copy; 2026 Dapoer Tiny — Spesialis Ayam Bakar Madu &amp; Masakan Nusantara. Hak Cipta Dilindungi.</p>
       <div class="bottom-links">
         <a href="#">Syarat &amp; Ketentuan Pemesanan</a>
         <a href="#">Kebijakan Privasi</a>
-        <a href="#">Kebijakan Pengiriman Hangat</a>
+        <a href="#">Garansi Pengiriman Hangat</a>
       </div>
     </div>
   </footer>
